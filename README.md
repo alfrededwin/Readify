@@ -7,4 +7,4 @@ Reading a book is challenging nowadays, we solve readers pain points:
   2. Busy lifestyle → all in one app will help to be organized and productive
   3. Distracting digital noise → need a tool to get back on track to resume from where left off
 
-Last edited by : Adam
+Last edited by : Adam Ameen
