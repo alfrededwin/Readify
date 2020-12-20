@@ -1,7 +1,5 @@
-# Readify
-Mobile Application Development Coursework 02
-
 # “Readify” is an app to help book readers to be organized and track their reading.
+Mobile Application Development Coursework 02
 
 Reading a book is challenging nowadays, we solve readers pain points:
 
