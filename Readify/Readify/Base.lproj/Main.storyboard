@@ -32,7 +32,7 @@
         <scene sceneID="iG2-jq-pgC">
             <objects>
                 <navigationController id="gxW-67-hzU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="VAQ-OA-VzD"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="VAQ-OA-VzD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fAn-TQ-AhW">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -52,14 +52,98 @@
                     <view key="view" contentMode="scaleToFill" id="nu6-OS-MMe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Yts-HF-PFw">
+                                <rect key="frame" x="33" y="109" width="348" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Reading"/>
+                                    <segment title="Completed"/>
+                                    <segment title="Wishlist"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="WzH-BY-cNc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Books" id="cek-62-m5S"/>
+                    <navigationItem key="navigationItem" title="Books" id="cek-62-m5S">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="h6v-eZ-IqR">
+                            <connections>
+                                <segue destination="2M4-6C-jOi" kind="show" id="L8M-0b-v1l"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sgo-Lc-DZK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="383" y="1465"/>
+            <point key="canvasLocation" x="382.60869565217394" y="1464.5089285714284"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2qK-rl-c4e">
+            <objects>
+                <viewController id="2M4-6C-jOi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s5i-Zm-LrZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ISBN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eoh-kY-oD7">
+                                <rect key="frame" x="20" y="188" width="167" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Book Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bRb-Yg-jmd">
+                                <rect key="frame" x="20" y="236" width="167" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9OM-dm-zk6">
+                                <rect key="frame" x="20" y="284" width="167" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Publisher" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hky-CP-iYZ">
+                                <rect key="frame" x="20" y="326" width="167" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year Published" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kgK-k8-Gz0">
+                                <rect key="frame" x="20" y="368" width="167" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Book Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eSR-dk-31f">
+                                <rect key="frame" x="20" y="410" width="167" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hzu-JN-Q80">
+                                <rect key="frame" x="20" y="459" width="292" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add New Book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M37-nR-V9u">
+                                <rect key="frame" x="20" y="105" width="226" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="y2u-Uu-dGu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="10V-ba-qFq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gFA-At-NYa"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Da3-sH-lhz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="382.60869565217394" y="2231.9196428571427"/>
         </scene>
         <!--Home-->
         <scene sceneID="9Qz-7Q-5DW">
@@ -68,20 +152,37 @@
                     <view key="view" contentMode="scaleToFill" id="J67-AS-zGa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Readify" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UKb-br-XX7">
+                                <rect key="frame" x="20" y="102" width="346" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello, Reader" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SsP-Nh-U4N">
+                                <rect key="frame" x="20" y="156" width="102" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="aP8-69-Qy9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="sDG-ZC-2Y8"/>
+                    <navigationItem key="navigationItem" title="Home" id="sDG-ZC-2Y8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fw8-9H-Zi1"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3DO-Gc-25U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-407" y="1465"/>
+            <point key="canvasLocation" x="-407.24637681159425" y="1464.5089285714284"/>
         </scene>
         <!--Books-->
         <scene sceneID="uI7-KB-6mu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c1I-TG-SaI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Books" id="0Xm-ix-kjx"/>
+                    <tabBarItem key="tabBarItem" title="Books" image="book" catalog="system" id="0Xm-ix-kjx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kyf-14-B6c">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -106,7 +207,9 @@
                         <viewLayoutGuide key="safeArea" id="j7K-tT-K5H"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Analytics" id="DBE-Lr-4sr"/>
+                    <navigationItem key="navigationItem" title="Analytics" id="DBE-Lr-4sr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3Tm-jf-AdL"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zBj-kt-Wu9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,7 +235,7 @@
         <scene sceneID="tSa-J4-qIm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gj8-Hh-VMN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Analytics" id="Bft-4R-2he"/>
+                    <tabBarItem key="tabBarItem" title="Analytics" image="chart.pie" catalog="system" id="Bft-4R-2he"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qi1-jV-Zb8">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -151,7 +254,7 @@
         <scene sceneID="K9f-fo-M7F">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JH3-e9-icY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="DJt-71-HCg"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="line.3.crossed.swirl.circle" catalog="system" id="DJt-71-HCg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="66b-Vd-Lh6">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -168,6 +271,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book" catalog="system" width="128" height="102"/>
+        <image name="chart.pie" catalog="system" width="128" height="121"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="line.3.crossed.swirl.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
