@@ -45,7 +45,7 @@
             </objects>
             <point key="canvasLocation" x="-407" y="629"/>
         </scene>
-        <!--View Controller-->
+        <!--Books-->
         <scene sceneID="88z-8S-Xuv">
             <objects>
                 <viewController id="3r4-Ib-R4U" sceneMemberID="viewController">
@@ -55,13 +55,13 @@
                         <viewLayoutGuide key="safeArea" id="WzH-BY-cNc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cek-62-m5S"/>
+                    <navigationItem key="navigationItem" title="Books" id="cek-62-m5S"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sgo-Lc-DZK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="383" y="1465"/>
         </scene>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="9Qz-7Q-5DW">
             <objects>
                 <viewController id="8j0-pk-Be6" sceneMemberID="viewController">
@@ -71,7 +71,7 @@
                         <viewLayoutGuide key="safeArea" id="aP8-69-Qy9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sDG-ZC-2Y8"/>
+                    <navigationItem key="navigationItem" title="Home" id="sDG-ZC-2Y8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3DO-Gc-25U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,7 +96,7 @@
             </objects>
             <point key="canvasLocation" x="383" y="629"/>
         </scene>
-        <!--View Controller-->
+        <!--Analytics-->
         <scene sceneID="uKF-xk-Ooa">
             <objects>
                 <viewController id="cDD-IN-xWD" sceneMemberID="viewController">
@@ -106,13 +106,13 @@
                         <viewLayoutGuide key="safeArea" id="j7K-tT-K5H"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="DBE-Lr-4sr"/>
+                    <navigationItem key="navigationItem" title="Analytics" id="DBE-Lr-4sr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zBj-kt-Wu9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1167" y="1465"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings-->
         <scene sceneID="m8t-PQ-R05">
             <objects>
                 <viewController id="OB1-zU-bnq" sceneMemberID="viewController">
@@ -122,7 +122,7 @@
                         <viewLayoutGuide key="safeArea" id="v6L-Ip-5Ja"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="GnK-a3-Q0o"/>
+                    <navigationItem key="navigationItem" title="Settings" id="GnK-a3-Q0o"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P1b-JM-aF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
