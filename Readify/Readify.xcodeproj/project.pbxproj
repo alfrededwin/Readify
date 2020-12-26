@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81A0BCB22597A99E00BD9861 /* AddBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A0BCB12597A99E00BD9861 /* AddBooksViewController.swift */; };
+		81A0BCBF2597A9DB00BD9861 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A0BCBE2597A9DB00BD9861 /* SettingsViewController.swift */; };
+		81A0BCC42597A9FA00BD9861 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A0BCC32597A9FA00BD9861 /* BooksViewController.swift */; };
 		B3318AC6258F536700DABEC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3318AC5258F536700DABEC7 /* AppDelegate.swift */; };
 		B3318AC8258F536700DABEC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3318AC7258F536700DABEC7 /* SceneDelegate.swift */; };
 		B3318ACA258F536700DABEC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3318AC9258F536700DABEC7 /* ViewController.swift */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		81A0BCB12597A99E00BD9861 /* AddBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBooksViewController.swift; sourceTree = "<group>"; };
+		81A0BCBE2597A9DB00BD9861 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		81A0BCC32597A9FA00BD9861 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BooksViewController.swift; path = Readify/Views/BooksViewController.swift; sourceTree = SOURCE_ROOT; };
 		B3318AC2258F536700DABEC7 /* Readify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Readify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3318AC5258F536700DABEC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3318AC7258F536700DABEC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81A0BCA82597A8DB00BD9861 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				81A0BCC32597A9FA00BD9861 /* BooksViewController.swift */,
+				81A0BCBE2597A9DB00BD9861 /* SettingsViewController.swift */,
+				B3318AC9258F536700DABEC7 /* ViewController.swift */,
+				81A0BCB12597A99E00BD9861 /* AddBooksViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		81A0BCA92597A8E600BD9861 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		81A0BCAA2597A8ED00BD9861 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3318ACB258F536700DABEC7 /* Main.storyboard */,
+				B3318AD3258F536800DABEC7 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B3318AB9258F536600DABEC7 = {
 			isa = PBXGroup;
 			children = (
@@ -101,12 +134,12 @@
 		B3318AC4258F536700DABEC7 /* Readify */ = {
 			isa = PBXGroup;
 			children = (
+				81A0BCAA2597A8ED00BD9861 /* Views */,
+				81A0BCA92597A8E600BD9861 /* Models */,
+				81A0BCA82597A8DB00BD9861 /* Controllers */,
 				B3318AC5258F536700DABEC7 /* AppDelegate.swift */,
 				B3318AC7258F536700DABEC7 /* SceneDelegate.swift */,
-				B3318AC9258F536700DABEC7 /* ViewController.swift */,
-				B3318ACB258F536700DABEC7 /* Main.storyboard */,
 				B3318AD1258F536800DABEC7 /* Assets.xcassets */,
-				B3318AD3258F536800DABEC7 /* LaunchScreen.storyboard */,
 				B3318AD6258F536800DABEC7 /* Info.plist */,
 				B3318ACE258F536700DABEC7 /* Readify.xcdatamodeld */,
 			);
@@ -262,6 +295,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3318AD0258F536700DABEC7 /* Readify.xcdatamodeld in Sources */,
+				81A0BCC42597A9FA00BD9861 /* BooksViewController.swift in Sources */,
+				81A0BCB22597A99E00BD9861 /* AddBooksViewController.swift in Sources */,
+				81A0BCBF2597A9DB00BD9861 /* SettingsViewController.swift in Sources */,
 				B3318ACA258F536700DABEC7 /* ViewController.swift in Sources */,
 				B3318AC6258F536700DABEC7 /* AppDelegate.swift in Sources */,
 				B3318AC8258F536700DABEC7 /* SceneDelegate.swift in Sources */,
