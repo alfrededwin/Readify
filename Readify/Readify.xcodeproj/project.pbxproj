@@ -346,11 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
-				B3CD9BC4259A5334009F8AED /* BookList+CoreDataProperties.swift in Sources */,
-=======
 				52D0DBB52599054E0057BD13 /* ShadowView.swift in Sources */,
->>>>>>> Added the title, and currently reading section for the home page
 				B3318AD0258F536700DABEC7 /* Readify.xcdatamodeld in Sources */,
 				B3CD9BB2259A45EA009F8AED /* Author+CoreDataProperties.swift in Sources */,
 				B3CD9BC3259A5334009F8AED /* BookList+CoreDataClass.swift in Sources */,
