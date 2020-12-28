@@ -17,6 +17,7 @@ extension Book {
     }
 
     @NSManaged public var created_at: Date?
+    @NSManaged public var current_page: Int16
     @NSManaged public var isbn_10: Int16
     @NSManaged public var isbn_13: Int16
     @NSManaged public var language: String?
@@ -25,10 +26,9 @@ extension Book {
     @NSManaged public var publisher: String?
     @NSManaged public var short_description: String?
     @NSManaged public var title: String?
-    @NSManaged public var current_page: Int16
-    @NSManaged public var booklist: BookList?
     @NSManaged public var authors: NSSet?
-    @NSManaged public var categories: BookCategory?
+    @NSManaged public var booklist: BookList?
+    @NSManaged public var categories: NSSet?
     @NSManaged public var activities: NSSet?
 
 }
@@ -47,6 +47,23 @@ extension Book {
 
     @objc(removeAuthors:)
     @NSManaged public func removeFromAuthors(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for categories
+extension Book {
+
+    @objc(addCategoriesObject:)
+    @NSManaged public func addToCategories(_ value: BookCategory)
+
+    @objc(removeCategoriesObject:)
+    @NSManaged public func removeFromCategories(_ value: BookCategory)
+
+    @objc(addCategories:)
+    @NSManaged public func addToCategories(_ values: NSSet)
+
+    @objc(removeCategories:)
+    @NSManaged public func removeFromCategories(_ values: NSSet)
 
 }
 
