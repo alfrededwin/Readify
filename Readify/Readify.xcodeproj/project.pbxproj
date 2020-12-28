@@ -29,6 +29,8 @@
 		B33D0BAD25992CA2003FBFE5 /* BookActivity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33D0BA725992CA2003FBFE5 /* BookActivity+CoreDataProperties.swift */; };
 		B33D0BAE25992CA2003FBFE5 /* BookCategory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33D0BA825992CA2003FBFE5 /* BookCategory+CoreDataClass.swift */; };
 		B33D0BAF25992CA2003FBFE5 /* BookCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33D0BA925992CA2003FBFE5 /* BookCategory+CoreDataProperties.swift */; };
+		B3CD9B89259A2FA3009F8AED /* ApiKeys-Sample.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3CD9B88259A2FA3009F8AED /* ApiKeys-Sample.plist */; };
+		B3CD9B8E259A3184009F8AED /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3CD9B8D259A3184009F8AED /* ApiKeys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		B33D0BA725992CA2003FBFE5 /* BookActivity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookActivity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		B33D0BA825992CA2003FBFE5 /* BookCategory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookCategory+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		B33D0BA925992CA2003FBFE5 /* BookCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookCategory+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		B3CD9B88259A2FA3009F8AED /* ApiKeys-Sample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ApiKeys-Sample.plist"; sourceTree = "<group>"; };
+		B3CD9B8D259A3184009F8AED /* ApiKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,8 @@
 				B3318AC7258F536700DABEC7 /* SceneDelegate.swift */,
 				B3318AD1258F536800DABEC7 /* Assets.xcassets */,
 				B3318AD6258F536800DABEC7 /* Info.plist */,
+				B3CD9B88259A2FA3009F8AED /* ApiKeys-Sample.plist */,
+				B3CD9B8D259A3184009F8AED /* ApiKeys.plist */,
 				B3318ACE258F536700DABEC7 /* Readify.xcdatamodeld */,
 			);
 			path = Readify;
@@ -300,6 +306,8 @@
 				B3318AD5258F536800DABEC7 /* LaunchScreen.storyboard in Resources */,
 				B3318AD2258F536800DABEC7 /* Assets.xcassets in Resources */,
 				B3318ACD258F536700DABEC7 /* Main.storyboard in Resources */,
+				B3CD9B89259A2FA3009F8AED /* ApiKeys-Sample.plist in Resources */,
+				B3CD9B8E259A3184009F8AED /* ApiKeys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
