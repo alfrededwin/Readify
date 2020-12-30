@@ -211,19 +211,19 @@
                                                 <rect key="frame" x="15" y="125" width="384" height="215"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are currently reading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Qp-M0-I4M" userLabel="youAreCurrentlyReading">
-                                                        <rect key="frame" x="20" y="20" width="344" height="19.5"/>
+                                                        <rect key="frame" x="20" y="20" width="344" height="19.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                         <color key="textColor" red="0.69757318369999999" green="0.84525638690000005" blue="0.90614334259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAH-Pl-8GH" userLabel="currentlyReadingLbl">
-                                                        <rect key="frame" x="20" y="44.5" width="344" height="32"/>
+                                                        <rect key="frame" x="20" y="44.666666666666686" width="344" height="32"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="24"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qoV-3H-gG9">
-                                                        <rect key="frame" x="100" y="83.5" width="184" height="110"/>
+                                                        <rect key="frame" x="100" y="83.666666666666686" width="184" height="110"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="110" id="ha9-lc-OFl"/>
                                                         </constraints>
