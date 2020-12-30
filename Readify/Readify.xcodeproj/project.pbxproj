@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52D0DBAF259901340057BD13 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D0DBAE259901340057BD13 /* HomeViewController.swift */; };
+		52D0DBB52599054E0057BD13 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D0DBB42599054E0057BD13 /* ShadowView.swift */; };
 		81A0BCB22597A99E00BD9861 /* AddBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A0BCB12597A99E00BD9861 /* AddBooksViewController.swift */; };
 		81A0BCBF2597A9DB00BD9861 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A0BCBE2597A9DB00BD9861 /* SettingsViewController.swift */; };
 		81A0BCC42597A9FA00BD9861 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A0BCC32597A9FA00BD9861 /* BooksViewController.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		52D0DBAE259901340057BD13 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		52D0DBB42599054E0057BD13 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		81A0BCB12597A99E00BD9861 /* AddBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBooksViewController.swift; sourceTree = "<group>"; };
 		81A0BCBE2597A9DB00BD9861 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		81A0BCC32597A9FA00BD9861 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BooksViewController.swift; path = Readify/Views/BooksViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -108,6 +112,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52D0DBB3259904EC0057BD13 /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+				52D0DBB42599054E0057BD13 /* ShadowView.swift */,
+			);
+			path = Styling;
+			sourceTree = "<group>";
+		};
 		81A0BCA82597A8DB00BD9861 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +127,7 @@
 				81A0BCBE2597A9DB00BD9861 /* SettingsViewController.swift */,
 				B3318AC9258F536700DABEC7 /* ViewController.swift */,
 				81A0BCB12597A99E00BD9861 /* AddBooksViewController.swift */,
+				52D0DBAE259901340057BD13 /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -131,6 +144,7 @@
 		B3318AB9258F536600DABEC7 = {
 			isa = PBXGroup;
 			children = (
+				52D0DBB3259904EC0057BD13 /* Styling */,
 				B3318AC4258F536700DABEC7 /* Readify */,
 				B3318ADE258F536900DABEC7 /* ReadifyTests */,
 				B3318AE9258F536900DABEC7 /* ReadifyUITests */,
@@ -333,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3CD9BC4259A5334009F8AED /* BookList+CoreDataProperties.swift in Sources */,
+				52D0DBB52599054E0057BD13 /* ShadowView.swift in Sources */,
 				B3318AD0258F536700DABEC7 /* Readify.xcdatamodeld in Sources */,
 				B3CD9BB2259A45EA009F8AED /* Author+CoreDataProperties.swift in Sources */,
 				B3CD9BC3259A5334009F8AED /* BookList+CoreDataClass.swift in Sources */,
@@ -345,6 +360,7 @@
 				B3CD9BAF259A45EA009F8AED /* Book+CoreDataClass.swift in Sources */,
 				B3CD9BC1259A5334009F8AED /* BookActivity+CoreDataClass.swift in Sources */,
 				81A0BCB22597A99E00BD9861 /* AddBooksViewController.swift in Sources */,
+				52D0DBAF259901340057BD13 /* HomeViewController.swift in Sources */,
 				81A0BCBF2597A9DB00BD9861 /* SettingsViewController.swift in Sources */,
 				B3318ACA258F536700DABEC7 /* ViewController.swift in Sources */,
 				B3318AC6258F536700DABEC7 /* AppDelegate.swift in Sources */,
