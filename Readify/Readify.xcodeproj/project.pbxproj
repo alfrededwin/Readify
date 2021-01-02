@@ -21,6 +21,8 @@
 		B3318AD5258F536800DABEC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3318AD3258F536800DABEC7 /* LaunchScreen.storyboard */; };
 		B3318AE0258F536900DABEC7 /* ReadifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3318ADF258F536900DABEC7 /* ReadifyTests.swift */; };
 		B3318AEB258F536900DABEC7 /* ReadifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3318AEA258F536900DABEC7 /* ReadifyUITests.swift */; };
+		B39BBAC4259FB144004E70AB /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39BBAC3259FB144004E70AB /* ApiHelper.swift */; };
+		B39BBACC259FB80D004E70AB /* ReadifyBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39BBACB259FB80D004E70AB /* ReadifyBook.swift */; };
 		B3CD9B89259A2FA3009F8AED /* ApiKeys-Sample.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3CD9B88259A2FA3009F8AED /* ApiKeys-Sample.plist */; };
 		B3CD9B8E259A3184009F8AED /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3CD9B8D259A3184009F8AED /* ApiKeys.plist */; };
 		B3CD9BAF259A45EA009F8AED /* Book+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD9BAB259A45EA009F8AED /* Book+CoreDataClass.swift */; };
@@ -73,6 +75,8 @@
 		B3318AE6258F536900DABEC7 /* ReadifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReadifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3318AEA258F536900DABEC7 /* ReadifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadifyUITests.swift; sourceTree = "<group>"; };
 		B3318AEC258F536900DABEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B39BBAC3259FB144004E70AB /* ApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
+		B39BBACB259FB80D004E70AB /* ReadifyBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadifyBook.swift; sourceTree = "<group>"; };
 		B3CD9B88259A2FA3009F8AED /* ApiKeys-Sample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ApiKeys-Sample.plist"; sourceTree = "<group>"; };
 		B3CD9B8D259A3184009F8AED /* ApiKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		B3CD9BAB259A45EA009F8AED /* Book+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 		B3318AC4258F536700DABEC7 /* Readify */ = {
 			isa = PBXGroup;
 			children = (
+				B39BBAC2259FB12A004E70AB /* Helpers */,
 				B3CD9BAA259A4584009F8AED /* Models */,
 				81A0BCAA2597A8ED00BD9861 /* Views */,
 				81A0BCA82597A8DB00BD9861 /* Controllers */,
@@ -197,6 +202,14 @@
 			path = ReadifyUITests;
 			sourceTree = "<group>";
 		};
+		B39BBAC2259FB12A004E70AB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B39BBAC3259FB144004E70AB /* ApiHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		B3CD9BAA259A4584009F8AED /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +221,7 @@
 				B3CD9BBE259A5334009F8AED /* BookList+CoreDataProperties.swift */,
 				B3CD9BAB259A45EA009F8AED /* Book+CoreDataClass.swift */,
 				B3CD9BAC259A45EA009F8AED /* Book+CoreDataProperties.swift */,
+				B39BBACB259FB80D004E70AB /* ReadifyBook.swift */,
 				B3CD9BAD259A45EA009F8AED /* Author+CoreDataClass.swift */,
 				B3CD9BAE259A45EA009F8AED /* Author+CoreDataProperties.swift */,
 			);
@@ -348,8 +362,10 @@
 			files = (
 				B3CD9BC4259A5334009F8AED /* BookList+CoreDataProperties.swift in Sources */,
 				52D0DBB52599054E0057BD13 /* ShadowView.swift in Sources */,
+				B39BBACC259FB80D004E70AB /* ReadifyBook.swift in Sources */,
 				B3318AD0258F536700DABEC7 /* Readify.xcdatamodeld in Sources */,
 				B3CD9BB2259A45EA009F8AED /* Author+CoreDataProperties.swift in Sources */,
+				B39BBAC4259FB144004E70AB /* ApiHelper.swift in Sources */,
 				B3CD9BC3259A5334009F8AED /* BookList+CoreDataClass.swift in Sources */,
 				81A0BCC42597A9FA00BD9861 /* BooksViewController.swift in Sources */,
 				B3CD9BB1259A45EA009F8AED /* Author+CoreDataClass.swift in Sources */,
