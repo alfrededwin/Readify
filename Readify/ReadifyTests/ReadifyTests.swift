@@ -20,13 +20,14 @@ class ReadifyTests: XCTestCase {
 
     func testReadingBooksFromGoogle() {
         
-        let book = Book()
-        var bookData;
+        let book = ReadifyBook()
         
         book.getBookByIsbn(isbn: "9781782434757", completionHandler: {
             result in
-            bookData = result
+            
+            XCTAssertEqual("Sudoku 1", result.items[0].volumeInfo.title)
         })
+        
     }
 
 }
