@@ -13,6 +13,14 @@ class AddBooksViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let book: ReadifyBook = ReadifyBook()
+        
+        var googleResponse: ReadifyBook.GoogleResponse;
+        
+        book.getBookByIsbn(isbn: "9781782434757", completionHandler: {
+            result in
+            print(result.items[0].volumeInfo.title)
+        })
     }
     
 
