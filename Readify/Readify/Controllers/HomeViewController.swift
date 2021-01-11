@@ -8,17 +8,22 @@
 import UIKit
 import QuartzCore
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    @IBOutlet weak var collectionView: UICollectionView!
     //variables
     @IBOutlet weak var currentlyReadingBookLbl: UILabel!
     @IBOutlet weak var currentlyReadingBookImage: UIImageView!
+    
+    var imageArray=[UIImage(named: "Img1"),UIImage(named: "Img2"),UIImage(named: "Img3"),UIImage(named: "Img4")]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeData();
         
+        //to remove the background color of the collection view
+        collectionView.backgroundColor = UIColor.clear
 
     }
     
@@ -38,5 +43,16 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return imageArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCollectionViewCell", for: indexPath) as! ImageCollectionViewCell
+        cell.imgItem.image = imageArray[indexPath.row]
+        
+        return cell
+    }
 
 }

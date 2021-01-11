@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		525B9EED25AA575900227740 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B9EEC25AA575900227740 /* ImageCollectionViewCell.swift */; };
 		52D0DBAF259901340057BD13 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D0DBAE259901340057BD13 /* HomeViewController.swift */; };
 		52D0DBB52599054E0057BD13 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D0DBB42599054E0057BD13 /* ShadowView.swift */; };
 		81A0BCB22597A99E00BD9861 /* AddBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A0BCB12597A99E00BD9861 /* AddBooksViewController.swift */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		525B9EEC25AA575900227740 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		52D0DBAE259901340057BD13 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		52D0DBB42599054E0057BD13 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		81A0BCB12597A99E00BD9861 /* AddBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBooksViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				B39BBACB259FB80D004E70AB /* ReadifyBook.swift */,
 				B3CD9BAD259A45EA009F8AED /* Author+CoreDataClass.swift */,
 				B3CD9BAE259A45EA009F8AED /* Author+CoreDataProperties.swift */,
+				525B9EEC25AA575900227740 /* ImageCollectionViewCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				B3CD9BC2259A5334009F8AED /* BookActivity+CoreDataProperties.swift in Sources */,
 				B3CD9BBF259A5334009F8AED /* BookCategory+CoreDataClass.swift in Sources */,
 				B3CD9BC0259A5334009F8AED /* BookCategory+CoreDataProperties.swift in Sources */,
+				525B9EED25AA575900227740 /* ImageCollectionViewCell.swift in Sources */,
 				B3CD9BB0259A45EA009F8AED /* Book+CoreDataProperties.swift in Sources */,
 				B3CD9BAF259A45EA009F8AED /* Book+CoreDataClass.swift in Sources */,
 				B3CD9BC1259A5334009F8AED /* BookActivity+CoreDataClass.swift in Sources */,
