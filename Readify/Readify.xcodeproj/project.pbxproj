@@ -13,6 +13,8 @@
 		81A0BCB22597A99E00BD9861 /* AddBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A0BCB12597A99E00BD9861 /* AddBooksViewController.swift */; };
 		81A0BCBF2597A9DB00BD9861 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A0BCBE2597A9DB00BD9861 /* SettingsViewController.swift */; };
 		81A0BCC42597A9FA00BD9861 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A0BCC32597A9FA00BD9861 /* BooksViewController.swift */; };
+		81C20CE325AB11BD003192BB /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C20CE125AB11BD003192BB /* CustomTableViewCell.swift */; };
+		81C20CE425AB11BD003192BB /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81C20CE225AB11BD003192BB /* CustomTableViewCell.xib */; };
 		B3318AC6258F536700DABEC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3318AC5258F536700DABEC7 /* AppDelegate.swift */; };
 		B3318AC8258F536700DABEC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3318AC7258F536700DABEC7 /* SceneDelegate.swift */; };
 		B3318ACA258F536700DABEC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3318AC9258F536700DABEC7 /* ViewController.swift */; };
@@ -62,6 +64,8 @@
 		81A0BCB12597A99E00BD9861 /* AddBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBooksViewController.swift; sourceTree = "<group>"; };
 		81A0BCBE2597A9DB00BD9861 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		81A0BCC32597A9FA00BD9861 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BooksViewController.swift; path = Readify/Views/BooksViewController.swift; sourceTree = SOURCE_ROOT; };
+		81C20CE125AB11BD003192BB /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; usesTabs = 0; };
+		81C20CE225AB11BD003192BB /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		B3318AC2258F536700DABEC7 /* Readify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Readify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3318AC5258F536700DABEC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3318AC7258F536700DABEC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,9 +151,19 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		81C20CE025AB1173003192BB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				81C20CE125AB11BD003192BB /* CustomTableViewCell.swift */,
+				81C20CE225AB11BD003192BB /* CustomTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		B3318AB9258F536600DABEC7 = {
 			isa = PBXGroup;
 			children = (
+				81C20CE025AB1173003192BB /* Cell */,
 				52D0DBB3259904EC0057BD13 /* Styling */,
 				B3318AC4258F536700DABEC7 /* Readify */,
 				B3318ADE258F536900DABEC7 /* ReadifyTests */,
@@ -336,6 +350,7 @@
 			files = (
 				B3318AD5258F536800DABEC7 /* LaunchScreen.storyboard in Resources */,
 				B3318AD2258F536800DABEC7 /* Assets.xcassets in Resources */,
+				81C20CE425AB11BD003192BB /* CustomTableViewCell.xib in Resources */,
 				B3318ACD258F536700DABEC7 /* Main.storyboard in Resources */,
 				B3CD9B89259A2FA3009F8AED /* ApiKeys-Sample.plist in Resources */,
 				B3CD9B8E259A3184009F8AED /* ApiKeys.plist in Resources */,
@@ -365,6 +380,7 @@
 			files = (
 				B3CD9BC4259A5334009F8AED /* BookList+CoreDataProperties.swift in Sources */,
 				52D0DBB52599054E0057BD13 /* ShadowView.swift in Sources */,
+				81C20CE325AB11BD003192BB /* CustomTableViewCell.swift in Sources */,
 				B39BBACC259FB80D004E70AB /* ReadifyBook.swift in Sources */,
 				B3318AD0258F536700DABEC7 /* Readify.xcdatamodeld in Sources */,
 				B3CD9BB2259A45EA009F8AED /* Author+CoreDataProperties.swift in Sources */,
