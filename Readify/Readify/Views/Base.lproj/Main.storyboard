@@ -56,20 +56,60 @@
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Yts-HF-PFw">
                                 <rect key="frame" x="77" y="88" width="260" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="C4f-bg-MFu"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Reading"/>
                                     <segment title="Completed"/>
                                     <segment title="Wishlist"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedChanges:" destination="3r4-Ib-R4U" eventType="valueChanged" id="uQ4-VU-z0E"/>
+                                </connections>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qwl-JN-PjS">
+                                <rect key="frame" x="0.0" y="124" width="414" height="693"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="693" id="zRT-ni-ziS"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Xsl-2m-RF1">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xsl-2m-RF1" id="jeg-Wp-pyN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.40000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="3r4-Ib-R4U" id="0HD-LB-HZ0"/>
+                                    <outlet property="delegate" destination="3r4-Ib-R4U" id="d6U-xf-bH9"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WzH-BY-cNc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Yts-HF-PFw" firstAttribute="centerX" secondItem="nu6-OS-MMe" secondAttribute="centerX" id="Dxp-Yz-zX1"/>
-                            <constraint firstItem="WzH-BY-cNc" firstAttribute="trailing" secondItem="Yts-HF-PFw" secondAttribute="trailing" constant="77" id="Nlt-3c-C27"/>
-                            <constraint firstItem="Yts-HF-PFw" firstAttribute="leading" secondItem="WzH-BY-cNc" secondAttribute="leading" constant="77" id="RLI-Gh-4a2"/>
-                            <constraint firstItem="Yts-HF-PFw" firstAttribute="top" secondItem="WzH-BY-cNc" secondAttribute="top" id="fdj-eO-aLn"/>
+                            <constraint firstItem="Yts-HF-PFw" firstAttribute="top" secondItem="WzH-BY-cNc" secondAttribute="top" id="FAv-T4-vHY"/>
+                            <constraint firstItem="qwl-JN-PjS" firstAttribute="trailing" secondItem="WzH-BY-cNc" secondAttribute="trailing" id="HeP-5f-OKh"/>
+                            <constraint firstItem="qwl-JN-PjS" firstAttribute="top" secondItem="Yts-HF-PFw" secondAttribute="bottom" constant="5" id="ldQ-LK-Nax"/>
+                            <constraint firstItem="WzH-BY-cNc" firstAttribute="trailing" secondItem="Yts-HF-PFw" secondAttribute="trailing" constant="77" id="p09-Xs-leS"/>
+                            <constraint firstItem="qwl-JN-PjS" firstAttribute="leading" secondItem="WzH-BY-cNc" secondAttribute="leading" id="q21-7R-MlV"/>
+                            <constraint firstItem="Yts-HF-PFw" firstAttribute="leading" secondItem="WzH-BY-cNc" secondAttribute="leading" constant="77" id="rTT-7b-mGY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Books" id="cek-62-m5S">
@@ -79,6 +119,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="segmentedControl" destination="Yts-HF-PFw" id="Jwy-sC-fn4"/>
+                        <outlet property="tableViewControl" destination="qwl-JN-PjS" id="yiK-qg-inT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sgo-Lc-DZK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
