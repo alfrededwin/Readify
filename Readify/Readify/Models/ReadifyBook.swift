@@ -117,5 +117,22 @@ class ReadifyBook {
             completionHandler(response)
         })
     }
+    
+    
+    func validateIsbn(_ isbn: String) -> (valid: Bool, error: String) {
+        // isbn length is 10 or 13
+        if (isbn.count > 10 && isbn.count < 13 || isbn.count < 10) {
+            return (valid: false, error: "Invalid ISBN number")
+        }
+        
+        // isbn should contain only numbers
+        let regexNumbersOnly = try! NSRegularExpression(pattern: ".*[^0-9].*", options: [])
+        let isbnNumberCheck = regexNumbersOnly.firstMatch(in: isbn, options: [], range: NSMakeRange(0, isbn.count)) == nil
+        if (!isbnNumberCheck) {
+            return (valid: false, error: "Invalid ISBN number")
+        }
+        
+        return (valid: true, error: "")
+    }
 }
 
