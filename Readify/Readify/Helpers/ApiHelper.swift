@@ -46,16 +46,6 @@ class ApiHelper {
                return
             }
             
-
-//            if let data = data,
-//               let response = try? JSONDecoder().decode(RESPONSE.self, from: data) {
-//
-//                completion(response)
-//            }
-//            else {
-//                print("Data not available")
-//            }
-            
             
             guard let data = data else {
                 print("Data not available")
