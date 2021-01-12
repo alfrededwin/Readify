@@ -25,7 +25,7 @@ class ReadifyTests: XCTestCase {
         book.getBookByIsbn(isbn: "9781782434757", completionHandler: {
             result in
             
-            XCTAssertEqual("Sudoku 1", result.items[0].volumeInfo.title)
+            XCTAssertEqual("Sudoku 1", result.items?[0].volumeInfo.title)
         })
         
     }
@@ -37,7 +37,7 @@ class ReadifyTests: XCTestCase {
         book.getBookByIsbn(isbn: "9780316015844", completionHandler: {
             result in
             
-            XCTAssertEqual("Twilight", result.items[0].volumeInfo.title)
+            XCTAssertEqual("Twilight", result.items?[0].volumeInfo.title)
         })
         
     }
