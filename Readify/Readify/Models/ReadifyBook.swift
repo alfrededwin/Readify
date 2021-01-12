@@ -23,7 +23,6 @@ class ReadifyBook {
         let volumeInfo: VolumeInfo
         let saleInfo: SaleInfo
         let accessInfo: AccessInfo
-        let searchInfo: SearchInfo
     }
 
     // MARK: - AccessInfo
@@ -48,10 +47,6 @@ class ReadifyBook {
         let isEbook: Bool
     }
 
-    // MARK: - SearchInfo
-    struct SearchInfo: Codable {
-        let textSnippet: String
-    }
 
     // MARK: - VolumeInfo
     struct VolumeInfo: Codable {
