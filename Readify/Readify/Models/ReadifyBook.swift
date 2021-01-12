@@ -13,7 +13,7 @@ class ReadifyBook {
     struct GoogleResponse: Codable {
         let kind: String
         let totalItems: Int
-        let items: [Item]
+        let items: [Item]?
     }
 
     // MARK: - Item
@@ -65,7 +65,7 @@ class ReadifyBook {
         let allowAnonLogging: Bool
         let contentVersion: String
         let panelizationSummary: PanelizationSummary
-        let imageLinks: ImageLinks
+        let imageLinks: ImageLinks?
         let language: String
         let previewLink, infoLink: String
         let canonicalVolumeLink: String

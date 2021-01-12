@@ -52,14 +52,28 @@ class AddBooksViewController: UIViewController {
         book.getBookByIsbn(isbn: isbn, completionHandler: {
             result in
             
-            let authors = result.items[0].volumeInfo.authors.joined(separator: ", ")
+            if result.totalItems == 0 {
+                DispatchQueue.main.async {
+                    self.clearUI();
+                }
+                return
+            }
+            
+            let authors = result.items?[0].volumeInfo.authors.joined(separator: ", ")
+            var thumbnail: String = ""
+            
+            if let imageLinks = result.items?[0].volumeInfo.imageLinks?.thumbnail {
+                thumbnail = imageLinks
+            } else {
+                print("Image link not available")
+            }
             
             let data = [
-                "title": result.items[0].volumeInfo.title,
-                "author": authors,
-                "publisher": result.items[0].volumeInfo.publisher,
-                "publishedDate": result.items[0].volumeInfo.publishedDate,
-                "thumbnail": result.items[0].volumeInfo.imageLinks.thumbnail
+                "title": result.items?[0].volumeInfo.title ?? "",
+                "author": authors ?? "",
+                "publisher": result.items?[0].volumeInfo.publisher ?? "",
+                "publishedDate": result.items?[0].volumeInfo.publishedDate ?? "",
+                "thumbnail": thumbnail
             ]
             
             
@@ -70,11 +84,24 @@ class AddBooksViewController: UIViewController {
         })
     }
     
+    private func clearUI() {
+        textFieldTitle.text = ""
+        textFieldAuthor.text = ""
+        textFieldPublisher.text = ""
+        textFieldPublishedYear.text = ""
+        
+        imageViewThumbnail.image = UIImage()
+        
+        showAlert(title: "Book not found", message: "No data found for the ISBN provided")
+    }
+    
     private func updateUI(_ data: [String:String]) -> Void {
         textFieldTitle.text = data["title"]
         textFieldAuthor.text = data["author"]
         textFieldPublisher.text = data["publisher"]
         textFieldPublishedYear.text = data["publishedDate"]
+        
+        imageViewThumbnail.image = UIImage()
         
         // load the image from the remote url
         guard let thumbUrl = data["thumbnail"] else { return }
