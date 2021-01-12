@@ -27,7 +27,16 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
     }
     
-    
+    // This Function is for the Onboarding Screen
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDefaults.standard.bool(forKey: "hasViewOnboarding") {
+            return
+        }
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        if let onboardingViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as? OnboardingViewController {
+            present(onboardingViewController, animated: true, completion: nil)
+        }
+    }
     
     func initializeData(){
         currentlyReadingBookLbl.text = "The Jungle Book"
