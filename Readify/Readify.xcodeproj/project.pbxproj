@@ -17,7 +17,6 @@
 		81C20CE325AB11BD003192BB /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C20CE125AB11BD003192BB /* CustomTableViewCell.swift */; };
 		81C20CE425AB11BD003192BB /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81C20CE225AB11BD003192BB /* CustomTableViewCell.xib */; };
 		81D81CA325AE14A600C743FD /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D81CA225AE14A600C743FD /* AnalyticsViewController.swift */; };
-		81D81CA825AE19DA00C743FD /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D81CA725AE19DA00C743FD /* AnalyticsViewController.swift */; };
 		81FF1ED025ADA2FC0027BA09 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81FF1ECF25ADA2FC0027BA09 /* Onboarding.storyboard */; };
 		81FF1ED525ADB5850027BA09 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FF1ED425ADB5850027BA09 /* OnboardingContentViewController.swift */; };
 		81FF1EDA25ADBE260027BA09 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FF1ED925ADBE260027BA09 /* OnboardingPageViewController.swift */; };
@@ -82,7 +81,6 @@
 		81C20CE125AB11BD003192BB /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; usesTabs = 0; };
 		81C20CE225AB11BD003192BB /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		81D81CA225AE14A600C743FD /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
-		81D81CA725AE19DA00C743FD /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
 		81FF1ECF25ADA2FC0027BA09 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		81FF1ED425ADB5850027BA09 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
 		81FF1ED925ADBE260027BA09 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
@@ -253,7 +251,6 @@
 				B3CD9B88259A2FA3009F8AED /* ApiKeys-Sample.plist */,
 				B3CD9B8D259A3184009F8AED /* ApiKeys.plist */,
 				B3318ACE258F536700DABEC7 /* Readify.xcdatamodeld */,
-				81D81CA725AE19DA00C743FD /* AnalyticsViewController.swift */,
 			);
 			path = Readify;
 			sourceTree = "<group>";
@@ -568,7 +565,6 @@
 				B3CD9BC1259A5334009F8AED /* BookActivity+CoreDataClass.swift in Sources */,
 				81A0BCB22597A99E00BD9861 /* AddBooksViewController.swift in Sources */,
 				52D0DBAF259901340057BD13 /* HomeViewController.swift in Sources */,
-				81D81CA825AE19DA00C743FD /* AnalyticsViewController.swift in Sources */,
 				81A0BCBF2597A9DB00BD9861 /* SettingsViewController.swift in Sources */,
 				B3318ACA258F536700DABEC7 /* ViewController.swift in Sources */,
 				B3318AC6258F536700DABEC7 /* AppDelegate.swift in Sources */,
