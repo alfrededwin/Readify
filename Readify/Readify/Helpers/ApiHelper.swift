@@ -46,14 +46,18 @@ class ApiHelper {
                return
             }
             
-
-            if let data = data,
-               let response = try? JSONDecoder().decode(RESPONSE.self, from: data) {
-                
-                completion(response)
-            }
-            else {
+            
+            guard let data = data else {
                 print("Data not available")
+                return
+            }
+            
+            do {
+                let response = try JSONDecoder().decode(RESPONSE.self, from: data)
+                completion(response)
+            } catch {
+                let error = error
+                print(error)
             }
         })
         task.resume()
@@ -62,7 +66,9 @@ class ApiHelper {
     
     static func loadRemoteImage(with endpoint: String, completionHandler: @escaping (_ data: Data?) -> Void) {
         
-        let url = URL(string: endpoint)!
+        guard let url = URL(string: endpoint) else {
+            return
+        }
         
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
           
