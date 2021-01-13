@@ -17,7 +17,7 @@ class AnalyticsViewController: UIViewController {
 //    var lineChart = LineChartView()
 
  
-    @IBOutlet weak var pieChart: LineChartView!
+    @IBOutlet weak var pieChart: PieChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
