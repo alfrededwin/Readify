@@ -5,42 +5,46 @@
 //  Created by Alfred Edwin on 2021-01-12.
 //
 // Reference :  https://www.youtube.com/watch?v=J9hl7HHXNHU
+// https://www.youtube.com/watch?v=GNf-SsDBQ20&t=501s
 
 import Charts
 import UIKit
 
-class AnalyticsViewController: UIViewController, ChartViewDelegate {
-    
-    var lineChart = LineChartView()
+//, ChartViewDelegate
 
+class AnalyticsViewController: UIViewController {
+    
+//    var lineChart = LineChartView()
+
+ 
+    @IBOutlet weak var pieChart: LineChartView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        lineChart.delegate = self
-
+//        lineChart.delegate = self
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        lineChart.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.width)
-        lineChart.center = view.center
-        view.addSubview(lineChart)
-        
+//        pieChart.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.width)
+//        pieChart.center = view.center
+//        view.addSubview(pieChart)
+
         var entries = [ChartDataEntry]()
-        
+
         for x in 0..<10 {
             entries.append(ChartDataEntry(x: Double(x),
                                           y: Double(x)))
         }
-        
-        let set = LineChartDataSet(entries: entries)
+
+        let set = PieChartDataSet(entries: entries)
         set.colors = ChartColorTemplates.material()
-        let data = LineChartData(dataSet: set)
-        lineChart.data = data
+        let data = PieChartData(dataSet: set)
+        pieChart.data = data
     }
-    
-    
-    
-    
+
+
+
 
     /*
     // MARK: - Navigation

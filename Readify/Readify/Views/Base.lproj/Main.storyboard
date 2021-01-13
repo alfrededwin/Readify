@@ -367,19 +367,19 @@
                                                         <rect key="frame" x="15" y="62.000000000000007" width="354" height="112.66666666666669"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yyO-k0-FU5">
-                                                                <rect key="frame" x="0.0" y="17.333333333333371" width="78.666666666666671" height="78"/>
+                                                                <rect key="frame" x="0.0" y="17.666666666666629" width="78.666666666666671" height="77.666666666666671"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noOfBooksRead" translatesAutoresizingMaskIntoConstraints="NO" id="ubJ-NC-xgE">
-                                                                        <rect key="frame" x="28.666666666666664" y="0.0" width="21.666666666666664" height="21.666666666666668"/>
+                                                                        <rect key="frame" x="28.666666666666664" y="0.0" width="21.333333333333336" height="21.333333333333332"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. Of Books Read" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJM-pa-g8W">
-                                                                        <rect key="frame" x="12.666666666666668" y="29.666666666666629" width="53.666666666666657" height="26"/>
+                                                                        <rect key="frame" x="12.666666666666668" y="29.333333333333371" width="53.666666666666657" height="26"/>
                                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rn3-D1-xfO">
-                                                                        <rect key="frame" x="36" y="63.666666666666636" width="6.6666666666666643" height="14.333333333333336"/>
+                                                                        <rect key="frame" x="36" y="63.333333333333378" width="6.6666666666666643" height="14.333333333333336"/>
                                                                         <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="11"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -387,19 +387,19 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2yD-FP-Zlg">
-                                                                <rect key="frame" x="91.666666666666686" y="24" width="79" height="65"/>
+                                                                <rect key="frame" x="91.666666666666686" y="24" width="79" height="64.666666666666671"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="cab-56-z40">
-                                                                        <rect key="frame" x="28.666666666666671" y="0.0" width="21.666666666666671" height="21.666666666666668"/>
+                                                                        <rect key="frame" x="28.666666666666671" y="0.0" width="21.333333333333329" height="21.333333333333332"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Time Spent" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8W-k7-UB4">
-                                                                        <rect key="frame" x="2" y="29.666666666666629" width="74.666666666666671" height="13"/>
+                                                                        <rect key="frame" x="2" y="29.333333333333371" width="74.666666666666671" height="13"/>
                                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23 hrs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuP-2b-y7m">
-                                                                        <rect key="frame" x="23.333333333333329" y="50.666666666666629" width="32" height="14.333333333333329"/>
+                                                                        <rect key="frame" x="23.333333333333329" y="50.333333333333371" width="32" height="14.333333333333329"/>
                                                                         <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="11"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -407,19 +407,19 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IY9-9z-d3C">
-                                                                <rect key="frame" x="183.66666666666666" y="24" width="78.666666666666657" height="65"/>
+                                                                <rect key="frame" x="183.66666666666666" y="24" width="78.666666666666657" height="64.666666666666671"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mostReadBook" translatesAutoresizingMaskIntoConstraints="NO" id="qSR-4C-yDN">
-                                                                        <rect key="frame" x="28.333333333333343" y="0.0" width="21.666666666666671" height="21.666666666666668"/>
+                                                                        <rect key="frame" x="28.666666666666686" y="0.0" width="21.333333333333329" height="21.333333333333332"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Read Book" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxm-dT-8Hb">
-                                                                        <rect key="frame" x="1.6666666666666856" y="29.666666666666629" width="75" height="13"/>
+                                                                        <rect key="frame" x="1.6666666666666856" y="29.333333333333371" width="75" height="13"/>
                                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Dark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MB-5V-Gbk">
-                                                                        <rect key="frame" x="17.333333333333339" y="50.666666666666629" width="43.666666666666657" height="14.333333333333329"/>
+                                                                        <rect key="frame" x="17.333333333333339" y="50.333333333333371" width="43.666666666666657" height="14.333333333333329"/>
                                                                         <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="11"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -430,19 +430,19 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="POp-if-2oZ">
-                                                                <rect key="frame" x="275.33333333333331" y="17.333333333333371" width="78.666666666666686" height="78"/>
+                                                                <rect key="frame" x="275.33333333333331" y="17.666666666666629" width="78.666666666666686" height="77.666666666666671"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noOfBooksAdded" translatesAutoresizingMaskIntoConstraints="NO" id="Sjc-OI-Aq9">
-                                                                        <rect key="frame" x="28.333333333333371" y="0.0" width="21.666666666666671" height="21.666666666666668"/>
+                                                                        <rect key="frame" x="28.666666666666686" y="0.0" width="21.333333333333329" height="21.333333333333332"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. Of Books Added" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYm-A4-qf5">
-                                                                        <rect key="frame" x="6.3333333333333712" y="29.666666666666629" width="66" height="26"/>
+                                                                        <rect key="frame" x="6.3333333333333712" y="29.333333333333371" width="66" height="26"/>
                                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjd-sM-ByX">
-                                                                        <rect key="frame" x="36" y="63.666666666666636" width="6.6666666666666643" height="14.333333333333336"/>
+                                                                        <rect key="frame" x="36" y="63.333333333333378" width="6.6666666666666643" height="14.333333333333336"/>
                                                                         <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="11"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -690,18 +690,29 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MCR-hd-0tr" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="15" y="318" width="384" height="386"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j7K-tT-K5H"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MCR-hd-0tr" firstAttribute="top" secondItem="xg9-0F-bHR" secondAttribute="bottom" constant="20" id="2hX-hD-bWO"/>
+                            <constraint firstItem="j7K-tT-K5H" firstAttribute="trailing" secondItem="MCR-hd-0tr" secondAttribute="trailing" constant="15" id="9Jc-IQ-gv7"/>
                             <constraint firstItem="xg9-0F-bHR" firstAttribute="top" secondItem="j7K-tT-K5H" secondAttribute="top" constant="20" id="Tdu-mh-2t7"/>
                             <constraint firstItem="xg9-0F-bHR" firstAttribute="leading" secondItem="j7K-tT-K5H" secondAttribute="leading" constant="15" id="dGg-qz-L1F"/>
+                            <constraint firstItem="j7K-tT-K5H" firstAttribute="bottom" secondItem="MCR-hd-0tr" secondAttribute="bottom" constant="109" id="hjE-65-c7S"/>
+                            <constraint firstItem="MCR-hd-0tr" firstAttribute="leading" secondItem="j7K-tT-K5H" secondAttribute="leading" constant="15" id="tpO-cf-hVx"/>
                             <constraint firstItem="j7K-tT-K5H" firstAttribute="trailing" secondItem="xg9-0F-bHR" secondAttribute="trailing" constant="15" id="zdj-yZ-ZNg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Analytics" id="DBE-Lr-4sr">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3Tm-jf-AdL"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="pieChart" destination="MCR-hd-0tr" id="6h5-I5-Bpe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zBj-kt-Wu9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
