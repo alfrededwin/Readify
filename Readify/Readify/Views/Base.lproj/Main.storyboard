@@ -131,7 +131,7 @@
         <!--Add Books View Controller-->
         <scene sceneID="2qK-rl-c4e">
             <objects>
-                <viewController id="2M4-6C-jOi" customClass="AddBooksViewController" customModule="Readify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddBooksViewController" id="2M4-6C-jOi" customClass="AddBooksViewController" customModule="Readify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s5i-Zm-LrZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -556,7 +556,7 @@
         <!--Analytics-->
         <scene sceneID="uKF-xk-Ooa">
             <objects>
-                <viewController id="cDD-IN-xWD" customClass="AnalyticsViewController" customModule="Readify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AnalyticsViewController" id="cDD-IN-xWD" customClass="AnalyticsViewController" customModule="Readify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H6e-tb-ZCh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

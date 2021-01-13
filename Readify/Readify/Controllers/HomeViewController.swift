@@ -16,7 +16,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var currentlyReadingBookImage: UIImageView!
     
     var imageArray=[UIImage(named: "Img1"),UIImage(named: "Img2"),UIImage(named: "Img3"),UIImage(named: "Img4")]
-    
+    var arr = [String]()
+    var sectionArr = [Any] ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,5 +64,29 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) -> Void {
+        let indexValue :String = String(format: "%d", indexPath.row)
+        
+        print(indexValue)
+        if (indexValue == "0"){
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "AddBooksViewController")
+            self.present(vc, animated: true)
+            print("1st")
+        } else if (indexValue == "1") {
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "AnalyticsViewController")
+            self.present(controller, animated: true, completion: nil)
+            print("2nd")
+        } else if (indexValue == "2") {
+            print("3rd")
+        } else {
+            print("4th")
+        }
+    }
+    
+    
 
 }
