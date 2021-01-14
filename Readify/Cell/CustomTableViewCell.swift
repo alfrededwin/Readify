@@ -9,9 +9,9 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var BookTitle: UILabel!
-    
-    @IBOutlet weak var Author: UILabel!
+    @IBOutlet weak var bookTitle: UILabel!
+    @IBOutlet weak var bookAuthor: UILabel!
+    @IBOutlet weak var bookImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,11 +24,12 @@ class CustomTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func customInit(text: String, author: String ) {
-        self.BookTitle.text = text
-        self.Author.text = author
+    func customInit(text: String, author: String, image: UIImage ) {
+        self.bookTitle.text = text
+        self.bookAuthor.text = author
+        self.bookImage.image = image
         
-        self.BookTitle.textColor = UIColor.white
+        self.bookTitle.textColor = UIColor.white
         
     }
     
