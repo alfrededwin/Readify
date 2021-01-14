@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		525B9EED25AA575900227740 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B9EEC25AA575900227740 /* ImageCollectionViewCell.swift */; };
+		52829BA025B04690002BD3CB /* CustomCompletedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52829B9E25B04690002BD3CB /* CustomCompletedTableViewCell.swift */; };
+		52829BA125B04690002BD3CB /* CustomCompletedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52829B9F25B04690002BD3CB /* CustomCompletedTableViewCell.xib */; };
+		52829BA725B05B77002BD3CB /* CustomWishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52829BA525B05B77002BD3CB /* CustomWishListTableViewCell.swift */; };
+		52829BA825B05B77002BD3CB /* CustomWishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52829BA625B05B77002BD3CB /* CustomWishListTableViewCell.xib */; };
 		52D0DBAF259901340057BD13 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D0DBAE259901340057BD13 /* HomeViewController.swift */; };
 		52D0DBB52599054E0057BD13 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D0DBB42599054E0057BD13 /* ShadowView.swift */; };
 		532886772B56273EB2A022B4 /* Pods_Readify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E069FAFF28C1407670615D /* Pods_Readify.framework */; };
@@ -72,6 +76,10 @@
 		16BE4F29BF5B53A722A4BD4F /* Pods_ReadifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReadifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28E069FAFF28C1407670615D /* Pods_Readify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Readify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		525B9EEC25AA575900227740 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		52829B9E25B04690002BD3CB /* CustomCompletedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCompletedTableViewCell.swift; sourceTree = "<group>"; };
+		52829B9F25B04690002BD3CB /* CustomCompletedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCompletedTableViewCell.xib; sourceTree = "<group>"; };
+		52829BA525B05B77002BD3CB /* CustomWishListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWishListTableViewCell.swift; sourceTree = "<group>"; };
+		52829BA625B05B77002BD3CB /* CustomWishListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomWishListTableViewCell.xib; sourceTree = "<group>"; };
 		52D0DBAE259901340057BD13 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		52D0DBB42599054E0057BD13 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		57734517AF72E8404B72EB1C /* Pods-ReadifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadifyTests.release.xcconfig"; path = "Target Support Files/Pods-ReadifyTests/Pods-ReadifyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -209,6 +217,10 @@
 			children = (
 				81C20CE125AB11BD003192BB /* CustomTableViewCell.swift */,
 				81C20CE225AB11BD003192BB /* CustomTableViewCell.xib */,
+				52829B9E25B04690002BD3CB /* CustomCompletedTableViewCell.swift */,
+				52829B9F25B04690002BD3CB /* CustomCompletedTableViewCell.xib */,
+				52829BA525B05B77002BD3CB /* CustomWishListTableViewCell.swift */,
+				52829BA625B05B77002BD3CB /* CustomWishListTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -408,7 +420,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52829BA125B04690002BD3CB /* CustomCompletedTableViewCell.xib in Resources */,
 				B3318AD5258F536800DABEC7 /* LaunchScreen.storyboard in Resources */,
+				52829BA825B05B77002BD3CB /* CustomWishListTableViewCell.xib in Resources */,
 				B3318AD2258F536800DABEC7 /* Assets.xcassets in Resources */,
 				81C20CE425AB11BD003192BB /* CustomTableViewCell.xib in Resources */,
 				B3318ACD258F536700DABEC7 /* Main.storyboard in Resources */,
@@ -542,12 +556,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52829BA025B04690002BD3CB /* CustomCompletedTableViewCell.swift in Sources */,
 				B3CD9BC4259A5334009F8AED /* BookList+CoreDataProperties.swift in Sources */,
 				52D0DBB52599054E0057BD13 /* ShadowView.swift in Sources */,
 				81C20CE325AB11BD003192BB /* CustomTableViewCell.swift in Sources */,
 				B39BBACC259FB80D004E70AB /* ReadifyBook.swift in Sources */,
 				B3318AD0258F536700DABEC7 /* Readify.xcdatamodeld in Sources */,
 				B3CD9BB2259A45EA009F8AED /* Author+CoreDataProperties.swift in Sources */,
+				52829BA725B05B77002BD3CB /* CustomWishListTableViewCell.swift in Sources */,
 				B39BBAC4259FB144004E70AB /* ApiHelper.swift in Sources */,
 				81FF1EDA25ADBE260027BA09 /* OnboardingPageViewController.swift in Sources */,
 				B3CD9BC3259A5334009F8AED /* BookList+CoreDataClass.swift in Sources */,
