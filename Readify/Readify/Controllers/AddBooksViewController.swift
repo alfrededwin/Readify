@@ -6,29 +6,17 @@
 //
 
 import UIKit
+import CoreData
 
 class AddBooksViewController: UIViewController {
     
-    let book: ReadifyBook = ReadifyBook()
+    var book: ReadifyBook!
     
     var bookItem: ReadifyBook.Item?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        textFieldIsbn.delegate = self
-        textFieldTitle.delegate = self
-
-        
-//        // Do any additional setup after loading the view.
-//        let book: ReadifyBook = ReadifyBook()
-//
-//        var googleResponse: ReadifyBook.GoogleResponse;
-//
-//
-    }
+    var bookData = [String: Any]()
+    var context: NSManagedObjectContext!
     
-
     @IBOutlet weak var textFieldIsbn: UITextField!
     @IBOutlet weak var textFieldTitle: UITextField!
     @IBOutlet weak var textFieldAuthor: UITextField!
@@ -38,15 +26,36 @@ class AddBooksViewController: UIViewController {
     
     @IBOutlet weak var imageViewThumbnail: UIImageView!
     
-    /*
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        book = ReadifyBook()
+        
+        textFieldIsbn.delegate = self
+        textFieldTitle.delegate = self
+
+    }
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        print(segue.identifier ?? "")
     }
-    */
+    
+    
+    
+    @IBAction func AddNewBook(_ sender: UIBarButtonItem) {
+        if bookData.isEmpty {
+            showAlert(title: "No data to save", message: "Enter an ISBN to search book")
+            return
+        }
+        
+        saveBook(bookData)
+        
+        showAlert(title: "Book saved", message: "Book saved to wish list")
+    }
     
     private func getBookDetailsFromApi(isbn: String) -> Void {
         book.getBookByIsbn(isbn: isbn, completionHandler: {
@@ -59,6 +68,7 @@ class AddBooksViewController: UIViewController {
                 return
             }
             
+            
             let authors = result.items?[0].volumeInfo.authors.joined(separator: ", ")
             var thumbnail: String = ""
             
@@ -68,12 +78,33 @@ class AddBooksViewController: UIViewController {
                 print("Image link not available")
             }
             
-            let data = [
+            var isbn10: String = ""
+            var isbn13: String = ""
+            if let indIdnety = result.items?[0].volumeInfo.industryIdentifiers {
+                
+                for val in indIdnety {
+                    if val.type == "ISBN_10" {
+                        isbn10 = val.identifier
+                    } else {
+                        isbn13 = val.identifier
+                    }
+                }
+                
+            }
+            
+            
+            let data: [String: Any] = [
                 "title": result.items?[0].volumeInfo.title ?? "",
                 "author": authors ?? "",
                 "publisher": result.items?[0].volumeInfo.publisher ?? "",
                 "publishedDate": result.items?[0].volumeInfo.publishedDate ?? "",
-                "thumbnail": thumbnail
+                "thumbnail": thumbnail,
+                "isbn10": isbn10,
+                "isbn13": isbn13,
+                "currentPage": Int16(0),
+                "language": result.items?[0].volumeInfo.language ?? "",
+                "shortDesc": result.items?[0].volumeInfo.volumeInfoDescription ?? "",
+                "pageCount": Int16(result.items?[0].volumeInfo.pageCount ?? 0)
             ]
             
             
@@ -95,16 +126,19 @@ class AddBooksViewController: UIViewController {
         showAlert(title: "Book not found", message: "No data found for the ISBN provided")
     }
     
-    private func updateUI(_ data: [String:String]) -> Void {
-        textFieldTitle.text = data["title"]
-        textFieldAuthor.text = data["author"]
-        textFieldPublisher.text = data["publisher"]
-        textFieldPublishedYear.text = data["publishedDate"]
+    private func updateUI(_ data: [String: Any]) -> Void {
+        // update temp dic data
+        bookData = data
+        
+        textFieldTitle.text = data["title"] as? String
+        textFieldAuthor.text = data["author"] as? String
+        textFieldPublisher.text = data["publisher"] as? String
+        textFieldPublishedYear.text = data["publishedDate"] as? String
         
         imageViewThumbnail.image = UIImage()
         
         // load the image from the remote url
-        guard let thumbUrl = data["thumbnail"] else { return }
+        guard let thumbUrl = data["thumbnail"] as? String else { return }
         
         ApiHelper.loadRemoteImage(with: thumbUrl, completionHandler: {
             imageData in
@@ -124,6 +158,38 @@ class AddBooksViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         
+    }
+    
+    func saveBook(_ data: [String: Any]) -> Void {
+        let book = Book.init(context: self.context)
+        book.title = data["title"] as! String
+        book.publisher = data["publisher"] as! String
+        book.published_date = data["publishedDate"] as! String
+        book.isbn_10 = data["isbn10"] as! String
+        book.isbn_13 = data["isbn13"] as! String
+        book.current_page = data["currentPage"] as? Int16 ?? 0
+        book.language = data["language"] as! String
+        book.page_count = data["pageCount"] as? Int16 ?? 0
+        book.short_description = data["shortDesc"] as! String
+        book.author = data["author"] as! String
+        book.created_at = Date()
+        
+        if let imageData = imageViewThumbnail.image?.pngData() {
+            book.image = imageData
+        }
+        
+        // create the list, default to whish list
+        let bookList = BookList.init(context: self.context)
+        bookList.name = "Wish List"
+        bookList.list_type = 3
+        
+        bookList.addToBooks(book)
+        
+        do {
+            try self.context?.save()
+        } catch let error as NSError {
+            print(error)
+        }
     }
 
 }
