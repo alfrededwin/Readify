@@ -2,7 +2,7 @@
 //  Book+CoreDataClass.swift
 //  Readify
 //
-//  Created by Shakeel Mohamed on 2020-12-28.
+//  Created by Shakeel Mohamed on 2021-01-14.
 //
 //
 

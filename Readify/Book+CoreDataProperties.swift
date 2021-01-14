@@ -2,7 +2,7 @@
 //  Book+CoreDataProperties.swift
 //  Readify
 //
-//  Created by Shakeel Mohamed on 2020-12-28.
+//  Created by Shakeel Mohamed on 2021-01-15.
 //
 //
 
@@ -18,18 +18,37 @@ extension Book {
 
     @NSManaged public var created_at: Date?
     @NSManaged public var current_page: Int16
-    @NSManaged public var isbn_10: Int16
-    @NSManaged public var isbn_13: Int16
+    @NSManaged public var image: Data?
+    @NSManaged public var isbn_10: String?
+    @NSManaged public var isbn_13: String?
     @NSManaged public var language: String?
     @NSManaged public var page_count: Int16
-    @NSManaged public var published_date: Date?
+    @NSManaged public var published_date: String?
     @NSManaged public var publisher: String?
     @NSManaged public var short_description: String?
     @NSManaged public var title: String?
+    @NSManaged public var author: String?
+    @NSManaged public var activities: NSSet?
     @NSManaged public var authors: NSSet?
     @NSManaged public var booklist: BookList?
     @NSManaged public var categories: NSSet?
-    @NSManaged public var activities: NSSet?
+
+}
+
+// MARK: Generated accessors for activities
+extension Book {
+
+    @objc(addActivitiesObject:)
+    @NSManaged public func addToActivities(_ value: BookActivity)
+
+    @objc(removeActivitiesObject:)
+    @NSManaged public func removeFromActivities(_ value: BookActivity)
+
+    @objc(addActivities:)
+    @NSManaged public func addToActivities(_ values: NSSet)
+
+    @objc(removeActivities:)
+    @NSManaged public func removeFromActivities(_ values: NSSet)
 
 }
 
@@ -64,23 +83,6 @@ extension Book {
 
     @objc(removeCategories:)
     @NSManaged public func removeFromCategories(_ values: NSSet)
-
-}
-
-// MARK: Generated accessors for activities
-extension Book {
-
-    @objc(addActivitiesObject:)
-    @NSManaged public func addToActivities(_ value: BookActivity)
-
-    @objc(removeActivitiesObject:)
-    @NSManaged public func removeFromActivities(_ value: BookActivity)
-
-    @objc(addActivities:)
-    @NSManaged public func addToActivities(_ values: NSSet)
-
-    @objc(removeActivities:)
-    @NSManaged public func removeFromActivities(_ values: NSSet)
 
 }
 

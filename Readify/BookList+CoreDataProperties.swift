@@ -2,7 +2,7 @@
 //  BookList+CoreDataProperties.swift
 //  Readify
 //
-//  Created by Shakeel Mohamed on 2020-12-28.
+//  Created by Shakeel Mohamed on 2021-01-14.
 //
 //
 
@@ -17,7 +17,7 @@ extension BookList {
     }
 
     @NSManaged public var list_type: Int16
-    @NSManaged public var updated_at: Date?
+    @NSManaged public var name: String?
     @NSManaged public var books: NSSet?
 
 }

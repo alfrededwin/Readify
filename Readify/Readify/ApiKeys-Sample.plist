@@ -2,7 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>google_books_key</key>
+	<key>baseUrl</key>
+	<string>https://www.googleapis.com/books/v1/volumes?q=</string>
+	<key>googleBooksApiKey</key>
 	<string>_google_books_api_key</string>
 </dict>
 </plist>
