@@ -8,6 +8,20 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="BalooThambi2-Bold.ttf">
+            <string>BalooThambi2-Bold</string>
+        </array>
+        <array key="BalooThambi2-ExtraBold.ttf">
+            <string>BalooThambi2-ExtraBold</string>
+        </array>
+        <array key="BalooThambi2-Regular.ttf">
+            <string>BalooThambi2-Regular</string>
+        </array>
+        <array key="BalooThambi2-SemiBold.ttf">
+            <string>BalooThambi2-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="Uwe-lY-Jw8">
@@ -137,16 +151,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Fh9-Xo-0cC">
-                                <rect key="frame" x="20" y="105" width="374" height="552.66666666666663"/>
+                                <rect key="frame" x="20" y="105" width="374" height="560.66666666666663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M37-nR-V9u">
-                                        <rect key="frame" x="0.0" y="0.0" width="179" height="33.666666666666664"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="41.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="BalooThambi2-ExtraBold" family="Baloo Thambi 2" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ISBN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eoh-kY-oD7">
-                                        <rect key="frame" x="0.0" y="46.666666666666657" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="54.666666666666657" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="09V-vc-nzD"/>
                                             <constraint firstAttribute="width" constant="374" id="G79-Mk-FIN"/>
@@ -155,7 +169,7 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Book Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bRb-Yg-jmd">
-                                        <rect key="frame" x="0.0" y="109.66666666666666" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="117.66666666666666" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="374" id="VCF-eu-RKh"/>
                                             <constraint firstAttribute="height" constant="50" id="WYe-L3-8sN"/>
@@ -164,7 +178,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9OM-dm-zk6">
-                                        <rect key="frame" x="0.0" y="172.66666666666669" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="180.66666666666669" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="6F3-LQ-8in"/>
                                             <constraint firstAttribute="width" constant="374" id="JKb-Ji-Kh4"/>
@@ -173,7 +187,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Publisher" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hky-CP-iYZ">
-                                        <rect key="frame" x="0.0" y="235.66666666666669" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="243.66666666666669" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="842-u2-rwL"/>
                                             <constraint firstAttribute="width" constant="374" id="YEF-A7-lLx"/>
@@ -182,7 +196,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year Published" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kgK-k8-Gz0">
-                                        <rect key="frame" x="0.0" y="298.66666666666669" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="306.66666666666669" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="LP9-9S-BH9"/>
                                             <constraint firstAttribute="width" constant="374" id="htb-MJ-uZL"/>
@@ -191,7 +205,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Book Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eSR-dk-31f">
-                                        <rect key="frame" x="0.0" y="361.66666666666669" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="369.66666666666669" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Dff-V3-A3r"/>
                                             <constraint firstAttribute="width" constant="374" id="k4k-OS-m2b"/>
@@ -200,7 +214,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hzu-JN-Q80">
-                                        <rect key="frame" x="0.0" y="424.66666666666663" width="374" height="128"/>
+                                        <rect key="frame" x="0.0" y="432.66666666666663" width="374" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="374" id="rB2-cu-MBk"/>
                                         </constraints>
@@ -255,28 +269,28 @@
                                                 </scopeButtonTitles>
                                             </searchBar>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Reader" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laS-mL-RJ0" userLabel="greeting">
-                                                <rect key="frame" x="10" y="71" width="394" height="39"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                                <rect key="frame" x="15" y="71" width="384" height="46.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="BalooThambi2-ExtraBold" family="Baloo Thambi 2" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26y-11-zmu" userLabel="currentlyReadingView" customClass="ShadowView" customModule="Readify" customModuleProvider="target">
-                                                <rect key="frame" x="15" y="125" width="384" height="215"/>
+                                                <rect key="frame" x="15" y="132.33333333333334" width="384" height="215.00000000000003"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are currently reading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Qp-M0-I4M" userLabel="youAreCurrentlyReading">
-                                                        <rect key="frame" x="20" y="20" width="344" height="19.666666666666671"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                                        <rect key="frame" x="20" y="20" width="344" height="23.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="BalooThambi2-Regular" family="Baloo Thambi 2" pointSize="15"/>
                                                         <color key="textColor" red="0.69757318369999999" green="0.84525638690000005" blue="0.90614334259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAH-Pl-8GH" userLabel="currentlyReadingLbl">
-                                                        <rect key="frame" x="20" y="44.666666666666686" width="344" height="31.333333333333329"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="24"/>
+                                                        <rect key="frame" x="20" y="46.333333333333343" width="344" height="41.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="BalooThambi2-Bold" family="Baloo Thambi 2" pointSize="27"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qoV-3H-gG9">
-                                                        <rect key="frame" x="100" y="83" width="184" height="110"/>
+                                                        <rect key="frame" x="100" y="94.999999999999972" width="184" height="110"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="110" id="ha9-lc-OFl"/>
                                                         </constraints>
@@ -287,7 +301,7 @@
                                                     <constraint firstItem="qoV-3H-gG9" firstAttribute="leading" secondItem="26y-11-zmu" secondAttribute="leading" constant="100" id="6bP-qO-4oN"/>
                                                     <constraint firstItem="BAH-Pl-8GH" firstAttribute="leading" secondItem="26y-11-zmu" secondAttribute="leading" constant="20" id="EBx-VA-Zn4"/>
                                                     <constraint firstAttribute="trailing" secondItem="BAH-Pl-8GH" secondAttribute="trailing" constant="20" id="MIw-XM-Ei8"/>
-                                                    <constraint firstItem="BAH-Pl-8GH" firstAttribute="top" secondItem="7Qp-M0-I4M" secondAttribute="bottom" constant="5" id="P13-DQ-vxG"/>
+                                                    <constraint firstItem="BAH-Pl-8GH" firstAttribute="top" secondItem="7Qp-M0-I4M" secondAttribute="bottom" constant="3" id="P13-DQ-vxG"/>
                                                     <constraint firstItem="qoV-3H-gG9" firstAttribute="top" secondItem="BAH-Pl-8GH" secondAttribute="bottom" constant="7" id="Uqd-m9-UDD"/>
                                                     <constraint firstAttribute="height" constant="215" id="YSQ-Xi-2iX"/>
                                                     <constraint firstAttribute="trailing" secondItem="qoV-3H-gG9" secondAttribute="trailing" constant="100" id="bbd-aX-gZ3"/>
@@ -311,7 +325,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UCL-5n-HYz" userLabel="quickActionCards">
-                                                <rect key="frame" x="15" y="360" width="399" height="128"/>
+                                                <rect key="frame" x="15" y="367.33333333333331" width="399" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="hC8-be-bHL"/>
@@ -352,14 +366,14 @@
                                                 </connections>
                                             </collectionView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWN-qa-p5S" userLabel="currentlyReadingView" customClass="ShadowView" customModule="Readify" customModuleProvider="target">
-                                                <rect key="frame" x="15" y="508" width="384" height="190"/>
+                                                <rect key="frame" x="15" y="515.33333333333337" width="384" height="190"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your last week reading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laj-6q-xDL" userLabel="currentlyReadingLbl">
                                                         <rect key="frame" x="15" y="20" width="354" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="32" id="hBj-vf-rjo"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="22"/>
+                                                        <fontDescription key="fontDescription" name="BalooThambi2-Bold" family="Baloo Thambi 2" pointSize="27"/>
                                                         <color key="textColor" systemColor="systemGreenColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -367,19 +381,19 @@
                                                         <rect key="frame" x="15" y="62.000000000000007" width="354" height="112.66666666666669"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yyO-k0-FU5">
-                                                                <rect key="frame" x="0.0" y="17.666666666666629" width="78.666666666666671" height="77.666666666666671"/>
+                                                                <rect key="frame" x="0.0" y="15" width="78.666666666666671" height="82.666666666666671"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noOfBooksRead" translatesAutoresizingMaskIntoConstraints="NO" id="ubJ-NC-xgE">
                                                                         <rect key="frame" x="28.666666666666664" y="0.0" width="21.333333333333336" height="21.333333333333332"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. Of Books Read" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJM-pa-g8W">
-                                                                        <rect key="frame" x="12.666666666666668" y="29.333333333333371" width="53.666666666666657" height="26"/>
-                                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                                                        <rect key="frame" x="9.9999999999999964" y="29.333333333333258" width="58.666666666666657" height="31"/>
+                                                                        <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="10"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rn3-D1-xfO">
-                                                                        <rect key="frame" x="36" y="63.333333333333378" width="6.6666666666666643" height="14.333333333333336"/>
+                                                                        <rect key="frame" x="36" y="68.333333333333258" width="6.6666666666666643" height="14.333333333333329"/>
                                                                         <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="11"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -387,19 +401,19 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2yD-FP-Zlg">
-                                                                <rect key="frame" x="91.666666666666686" y="24" width="79" height="64.666666666666671"/>
+                                                                <rect key="frame" x="91.666666666666686" y="22.666666666666629" width="79" height="67.333333333333329"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="cab-56-z40">
                                                                         <rect key="frame" x="28.666666666666671" y="0.0" width="21.333333333333329" height="21.333333333333332"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Time Spent" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8W-k7-UB4">
-                                                                        <rect key="frame" x="2" y="29.333333333333371" width="74.666666666666671" height="13"/>
-                                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                                                        <rect key="frame" x="2.3333333333333286" y="29.333333333333375" width="74" height="15.666666666666668"/>
+                                                                        <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="10"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23 hrs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuP-2b-y7m">
-                                                                        <rect key="frame" x="23.333333333333329" y="50.333333333333371" width="32" height="14.333333333333329"/>
+                                                                        <rect key="frame" x="23.333333333333329" y="53" width="32" height="14.333333333333329"/>
                                                                         <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="11"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -407,19 +421,19 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IY9-9z-d3C">
-                                                                <rect key="frame" x="183.66666666666666" y="24" width="78.666666666666657" height="64.666666666666671"/>
+                                                                <rect key="frame" x="183.66666666666666" y="22.666666666666629" width="78.666666666666657" height="67.333333333333329"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mostReadBook" translatesAutoresizingMaskIntoConstraints="NO" id="qSR-4C-yDN">
                                                                         <rect key="frame" x="28.666666666666686" y="0.0" width="21.333333333333329" height="21.333333333333332"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Read Book" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxm-dT-8Hb">
-                                                                        <rect key="frame" x="1.6666666666666856" y="29.333333333333371" width="75" height="13"/>
-                                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                                                        <rect key="frame" x="3.6666666666666856" y="29.333333333333375" width="71" height="15.666666666666668"/>
+                                                                        <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="10"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Dark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MB-5V-Gbk">
-                                                                        <rect key="frame" x="17.333333333333339" y="50.333333333333371" width="43.666666666666657" height="14.333333333333329"/>
+                                                                        <rect key="frame" x="17.333333333333339" y="53" width="43.666666666666657" height="14.333333333333329"/>
                                                                         <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="11"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -430,19 +444,19 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="POp-if-2oZ">
-                                                                <rect key="frame" x="275.33333333333331" y="17.666666666666629" width="78.666666666666686" height="77.666666666666671"/>
+                                                                <rect key="frame" x="275.33333333333331" y="15" width="78.666666666666686" height="82.666666666666671"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noOfBooksAdded" translatesAutoresizingMaskIntoConstraints="NO" id="Sjc-OI-Aq9">
                                                                         <rect key="frame" x="28.666666666666686" y="0.0" width="21.333333333333329" height="21.333333333333332"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. Of Books Added" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYm-A4-qf5">
-                                                                        <rect key="frame" x="6.3333333333333712" y="29.333333333333371" width="66" height="26"/>
-                                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                                                        <rect key="frame" x="9.9999999999999964" y="29.333333333333258" width="58.666666666666657" height="31"/>
+                                                                        <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="10"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjd-sM-ByX">
-                                                                        <rect key="frame" x="36" y="63.333333333333378" width="6.6666666666666643" height="14.333333333333336"/>
+                                                                        <rect key="frame" x="36" y="68.333333333333258" width="6.6666666666666643" height="14.333333333333329"/>
                                                                         <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="11"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -487,14 +501,14 @@
                                             <constraint firstAttribute="trailing" secondItem="kBQ-Zi-jeS" secondAttribute="trailing" id="2rI-jD-7Zn"/>
                                             <constraint firstItem="kBQ-Zi-jeS" firstAttribute="top" secondItem="Ja4-YW-TMK" secondAttribute="top" id="8TN-UZ-7Oj"/>
                                             <constraint firstItem="kBQ-Zi-jeS" firstAttribute="leading" secondItem="Ja4-YW-TMK" secondAttribute="leading" id="9OH-0V-Wae"/>
-                                            <constraint firstAttribute="trailing" secondItem="laS-mL-RJ0" secondAttribute="trailing" constant="10" id="GIn-Ko-0qB"/>
+                                            <constraint firstAttribute="trailing" secondItem="laS-mL-RJ0" secondAttribute="trailing" constant="15" id="GIn-Ko-0qB"/>
                                             <constraint firstItem="UCL-5n-HYz" firstAttribute="top" secondItem="26y-11-zmu" secondAttribute="bottom" constant="20" id="Iqd-fO-EpS"/>
                                             <constraint firstItem="MWN-qa-p5S" firstAttribute="leading" secondItem="Ja4-YW-TMK" secondAttribute="leading" constant="15" id="Tgz-ii-gaL"/>
                                             <constraint firstItem="laS-mL-RJ0" firstAttribute="top" secondItem="kBQ-Zi-jeS" secondAttribute="bottom" constant="15" id="X1N-0r-itm"/>
                                             <constraint firstAttribute="height" constant="1200" id="Ygf-T3-6dn"/>
                                             <constraint firstAttribute="trailing" secondItem="26y-11-zmu" secondAttribute="trailing" constant="15" id="cRI-PB-Lf9"/>
                                             <constraint firstItem="26y-11-zmu" firstAttribute="top" secondItem="laS-mL-RJ0" secondAttribute="bottom" constant="15" id="fTR-2e-N1y"/>
-                                            <constraint firstItem="laS-mL-RJ0" firstAttribute="leading" secondItem="Ja4-YW-TMK" secondAttribute="leading" constant="10" id="jHP-Ei-cOC"/>
+                                            <constraint firstItem="laS-mL-RJ0" firstAttribute="leading" secondItem="Ja4-YW-TMK" secondAttribute="leading" constant="15" id="jHP-Ei-cOC"/>
                                             <constraint firstItem="MWN-qa-p5S" firstAttribute="top" secondItem="UCL-5n-HYz" secondAttribute="bottom" constant="20" id="pF3-Mc-xMP"/>
                                             <constraint firstAttribute="trailing" secondItem="UCL-5n-HYz" secondAttribute="trailing" id="usX-xL-Cgf"/>
                                             <constraint firstItem="UCL-5n-HYz" firstAttribute="leading" secondItem="Ja4-YW-TMK" secondAttribute="leading" constant="15" id="vaQ-wH-kgi"/>
@@ -520,9 +534,7 @@
                             <constraint firstItem="pLF-T1-tBe" firstAttribute="trailing" secondItem="aP8-69-Qy9" secondAttribute="trailing" id="oJ3-Bh-C1y"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="sDG-ZC-2Y8">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fw8-9H-Zi1"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Home" id="sDG-ZC-2Y8"/>
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
                         <outlet property="collectionView" destination="UCL-5n-HYz" id="FwA-Kw-vNB"/>
@@ -569,7 +581,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="yLV-Ki-OJE"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="22"/>
+                                        <fontDescription key="fontDescription" name="BalooThambi2-ExtraBold" family="Baloo Thambi 2" pointSize="27"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -707,9 +719,7 @@
                             <constraint firstItem="j7K-tT-K5H" firstAttribute="trailing" secondItem="xg9-0F-bHR" secondAttribute="trailing" constant="15" id="zdj-yZ-ZNg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Analytics" id="DBE-Lr-4sr">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3Tm-jf-AdL"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Analytics" id="DBE-Lr-4sr"/>
                     <connections>
                         <outlet property="pieChart" destination="MCR-hd-0tr" id="6h5-I5-Bpe"/>
                     </connections>
