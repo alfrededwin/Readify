@@ -11,6 +11,7 @@ class CustomCompletedTableViewCell: UITableViewCell {
 
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var bookAuthor: UILabel!
+    @IBOutlet weak var bookImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,9 +24,10 @@ class CustomCompletedTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func customInit(text: String, author: String ) {
+    func customInit(text: String, author: String, image: UIImage ) {
         self.bookTitle.text = text
         self.bookAuthor.text = author
+        self.bookImage.image = image
         
         self.bookTitle.textColor = UIColor.white
         

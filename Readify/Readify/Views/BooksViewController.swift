@@ -166,8 +166,13 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             let cellForReading = Bundle.main.loadNibNamed("CustomTableViewCell", owner: self, options: nil)?.first as! CustomTableViewCell
             
-            cellForReading.BookTitle.text = arrayOfCellDataReading[indexPath.row].title
-            cellForReading.Author.text = arrayOfCellDataReading[indexPath.row].author
+            cellForReading.bookTitle.text = arrayOfCellDataReading[indexPath.row].title
+            cellForReading.bookAuthor.text = arrayOfCellDataReading[indexPath.row].author
+            
+            if let image = arrayOfCellDataReading[indexPath.row].image {
+                cellForReading.bookImage.image = UIImage(data: image)
+            }
+            
             
             //styling
             cellForReading.contentView.layer.cornerRadius = 10
@@ -181,6 +186,10 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cellForCompleted.bookTitle.text = arrayOfCellDataCompleted[indexPath.row].title
             cellForCompleted.bookAuthor.text = arrayOfCellDataCompleted[indexPath.row].author
             
+            if let image = arrayOfCellDataCompleted[indexPath.row].image {
+                cellForCompleted.bookImage.image = UIImage(data: image)
+            }
+            
             //styling
             cellForCompleted.contentView.layer.cornerRadius = 10
             cellForCompleted.contentView.frame = cellForCompleted.contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
@@ -193,6 +202,10 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cellForWishlist.bookTitle.text = arrayOfCellWishlist[indexPath.row].title
             cellForWishlist.bookAuthor.text = arrayOfCellWishlist[indexPath.row].author
             
+            if let image = arrayOfCellWishlist[indexPath.row].image {
+                cellForWishlist.bookImage.image = UIImage(data: image)
+            }
+            
             //styling
             cellForWishlist.contentView.layer.cornerRadius = 10
             cellForWishlist.contentView.frame = cellForWishlist.contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
@@ -202,7 +215,6 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
 
-    
     @IBAction func segmentedChanges(_ sender: UISegmentedControl) {
         tableViewControl.reloadData()
     }
@@ -250,7 +262,7 @@ extension BooksViewController: NSFetchedResultsControllerDelegate {
             
         case .update:
             if let indexPath = indexPath, let cell = tableViewControl.cellForRow(at: indexPath) as? CustomTableViewCell {
-                configureCell(cell, at: indexPath)
+//                configureCell(cell, at: indexPath)
             }
             break
             
@@ -267,17 +279,17 @@ extension BooksViewController: NSFetchedResultsControllerDelegate {
         }
     }
     
-    func configureCell(_ cell: CustomTableViewCell, at indexPath: IndexPath) {
-        let book = fetchedResultsController.object(at: indexPath) as! Book
-        
-        var author: String = "";
-        if let authours = book.authors!.allObjects as? [Author] {
-            
-            for item in authours {
-                author = "\(author), \(item)"
-            }
-        }
-        
-        cell.customInit(text: book.title!, author: author)
-    }
+//    func configureCell(_ cell: CustomTableViewCell, at indexPath: IndexPath) {
+//        let book = fetchedResultsController.object(at: indexPath) as! Book
+//
+//        var author: String = "";
+//        if let authours = book.authors!.allObjects as? [Author] {
+//
+//            for item in authours {
+//                author = "\(author), \(item)"
+//            }
+//        }
+//
+//        cell.customInit(text: book.title!, author: author)
+//    }
 }
