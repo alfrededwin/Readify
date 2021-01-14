@@ -18,9 +18,9 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDa
     
     weak var onboardDelegate: OnboardingPageViewControllerDelegate?
     
-    var pageHeadings = ["Track Your Own Reading Books", "Track Your Own Reading Books 2", "Track Your Own Reading Books 3"]
-    var pageSubHeadings = ["Read More Books and Search any Books", "Read More Books and Search any Books 2", "Read More Books and Search any Books 3"]
-    var pageImages = ["onboarding1", "onboarding2", "onboarding3"]
+    var pageHeadings = ["SEARCH FOR ANY BOOK THAT YOU LOVE", "MAKE READING SIMPLE AND SIGNIFICANT", "TRACK YOUR OWN READING AND READ MORE"]
+    var pageSubHeadings = ["Choose from a wide range of books available in the Readify app. Choose, add & read.", "Read more books and keep on the flow. Never leave a page unturned.", "Structure your reading in a way that is best for you. Get insights of your reading."]
+    var pageImages = ["onboarding3", "onboarding2", "onboarding1"]
     
     var currentIndex = 0
     
