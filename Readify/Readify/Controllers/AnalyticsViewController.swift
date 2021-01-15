@@ -10,29 +10,21 @@
 import Charts
 import UIKit
 
-//, ChartViewDelegate
 
 class AnalyticsViewController: UIViewController {
-    
-//    var lineChart = LineChartView()
-
- 
+     
     @IBOutlet weak var pieChart: PieChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        lineChart.delegate = self
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-//        pieChart.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.width)
-//        pieChart.center = view.center
-//        view.addSubview(pieChart)
 
         var entries = [ChartDataEntry]()
 
-        for x in 0..<10 {
+        for x in 0..<3 {
             entries.append(ChartDataEntry(x: Double(x),
                                           y: Double(x)))
         }
@@ -42,8 +34,6 @@ class AnalyticsViewController: UIViewController {
         let data = PieChartData(dataSet: set)
         pieChart.data = data
     }
-
-
 
 
     /*
