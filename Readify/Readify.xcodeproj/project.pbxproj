@@ -19,6 +19,7 @@
 		52829BD725B0C149002BD3CB /* BalooThambi2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52829BD325B0C149002BD3CB /* BalooThambi2-ExtraBold.ttf */; };
 		52829BD825B0C149002BD3CB /* BalooThambi2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52829BD425B0C149002BD3CB /* BalooThambi2-Regular.ttf */; };
 		52829BD925B0C149002BD3CB /* BalooThambi2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52829BD525B0C149002BD3CB /* BalooThambi2-Medium.ttf */; };
+		528EB83225B1E79F005B8509 /* UpdateProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528EB83125B1E79F005B8509 /* UpdateProgressViewController.swift */; };
 		52D0DBAF259901340057BD13 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D0DBAE259901340057BD13 /* HomeViewController.swift */; };
 		52D0DBB52599054E0057BD13 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D0DBB42599054E0057BD13 /* ShadowView.swift */; };
 		532886772B56273EB2A022B4 /* Pods_Readify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E069FAFF28C1407670615D /* Pods_Readify.framework */; };
@@ -94,6 +95,7 @@
 		52829BD325B0C149002BD3CB /* BalooThambi2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooThambi2-ExtraBold.ttf"; sourceTree = "<group>"; };
 		52829BD425B0C149002BD3CB /* BalooThambi2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooThambi2-Regular.ttf"; sourceTree = "<group>"; };
 		52829BD525B0C149002BD3CB /* BalooThambi2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooThambi2-Medium.ttf"; sourceTree = "<group>"; };
+		528EB83125B1E79F005B8509 /* UpdateProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProgressViewController.swift; sourceTree = "<group>"; };
 		52D0DBAE259901340057BD13 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		52D0DBB42599054E0057BD13 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		57734517AF72E8404B72EB1C /* Pods-ReadifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadifyTests.release.xcconfig"; path = "Target Support Files/Pods-ReadifyTests/Pods-ReadifyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				81FF1EDE25ADC1F50027BA09 /* OnboardingViewController.swift */,
 				81D81CA225AE14A600C743FD /* AnalyticsViewController.swift */,
 				52133AE025B0EB4600B7C8CA /* DetailsViewController.swift */,
+				528EB83125B1E79F005B8509 /* UpdateProgressViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				B32355BD25B085E9009D3509 /* BookList+CoreDataClass.swift in Sources */,
 				52D0DBB52599054E0057BD13 /* ShadowView.swift in Sources */,
 				81C20CE325AB11BD003192BB /* CustomTableViewCell.swift in Sources */,
+				528EB83225B1E79F005B8509 /* UpdateProgressViewController.swift in Sources */,
 				B39BBACC259FB80D004E70AB /* ReadifyBook.swift in Sources */,
 				B3318AD0258F536700DABEC7 /* Readify.xcdatamodeld in Sources */,
 				B3CD9BB2259A45EA009F8AED /* Author+CoreDataProperties.swift in Sources */,
