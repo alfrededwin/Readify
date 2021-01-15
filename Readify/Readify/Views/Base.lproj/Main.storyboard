@@ -15,6 +15,9 @@
         <array key="BalooThambi2-ExtraBold.ttf">
             <string>BalooThambi2-ExtraBold</string>
         </array>
+        <array key="BalooThambi2-Medium.ttf">
+            <string>BalooThambi2-Medium</string>
+        </array>
         <array key="BalooThambi2-Regular.ttf">
             <string>BalooThambi2-Regular</string>
         </array>
@@ -107,9 +110,6 @@
                                                 <size key="value" width="0.0" height="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="SmX-Np-Rvz" kind="presentation" trigger="accessoryAction" id="aUQ-hF-lx2"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -258,14 +258,14 @@
             <objects>
                 <viewController title="DetailsViewController" id="d8e-4C-mIj" customClass="DetailsViewController" customModule="Readify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4kM-1E-o5V">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="V3g-9X-y38">
-                                <rect key="frame" x="0.0" y="76" width="428" height="742"/>
+                                <rect key="frame" x="0.0" y="108" width="428" height="764"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Xzq-ha-fdd">
-                                        <rect key="frame" x="87" y="0.0" width="254" height="458.66666666666669"/>
+                                        <rect key="frame" x="87" y="0.0" width="254" height="462.66666666666669"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fxe-6H-kZu">
                                                 <rect key="frame" x="7" y="0.0" width="240" height="320"/>
@@ -274,16 +274,16 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3bH-RU-YG0">
-                                                <rect key="frame" x="97" y="322" width="60" height="136.66666666666663"/>
+                                                <rect key="frame" x="97" y="322" width="60" height="140.66666666666663"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIq-nv-gMj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="119"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="117.33333333333333"/>
                                                         <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="18"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5J-Jl-H8j">
-                                                        <rect key="frame" x="0.0" y="119" width="60" height="17.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="117.33333333333336" width="60" height="23.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="15"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -302,10 +302,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ohU-49-e5L">
-                                        <rect key="frame" x="10" y="518.66666666666663" width="408" height="121.33333333333337"/>
+                                        <rect key="frame" x="10" y="522.66666666666663" width="408" height="139.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum is simply dummy text of the Lorem" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHh-c1-x9e">
-                                                <rect key="frame" x="0.0" y="0.0" width="302.33333333333331" height="22"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="287.66666666666669" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="rGn-zn-1TA"/>
                                                 </constraints>
@@ -314,28 +314,28 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xUr-kj-oXX">
-                                                <rect key="frame" x="0.0" y="44.999999999999993" width="216" height="76.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="44.999999999999993" width="218.33333333333334" height="94.333333333333314"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjH-yo-2Ri">
-                                                        <rect key="frame" x="0.0" y="0.0" width="138.66666666666666" height="21"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="140.66666666666666" height="27.666666666666668"/>
                                                         <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="18"/>
                                                         <color key="textColor" systemColor="systemIndigoColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bvX-Ww-bBh">
-                                                        <rect key="frame" x="0.0" y="31.000000000000004" width="216" height="45.333333333333343"/>
+                                                        <rect key="frame" x="0.0" y="37.666666666666742" width="206.66666666666666" height="56.666666666666657"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kxd-kq-Ram">
-                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="45.333333333333336"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="98.333333333333329" height="56.666666666666664"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Publisher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87P-QA-XcP">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="62.666666666666664" height="17.666666666666668"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="63.333333333333336" height="23.333333333333332"/>
                                                                         <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="15"/>
                                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Published Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bis-mi-bIN">
-                                                                        <rect key="frame" x="0.0" y="27.666666666666742" width="100" height="17.666666666666671"/>
+                                                                        <rect key="frame" x="0.0" y="33.333333333333258" width="98.333333333333329" height="23.333333333333329"/>
                                                                         <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="15"/>
                                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -343,16 +343,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eyR-cA-7R0">
-                                                                <rect key="frame" x="113" y="0.0" width="103" height="45.333333333333336"/>
+                                                                <rect key="frame" x="108.33333333333334" y="0.0" width="98.333333333333343" height="56.666666666666664"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="isbn10 / isbn13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amI-cl-8BE">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="103" height="17.666666666666668"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="94.333333333333329" height="23.333333333333332"/>
                                                                         <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="15"/>
                                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" ambiguous="YES" text="224 pages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiJ-Lv-xLT">
-                                                                        <rect key="frame" x="0.0" y="27.666666666666742" width="70.333333333333329" height="17.666666666666671"/>
+                                                                        <rect key="frame" x="0.0" y="33.333333333333258" width="66.666666666666671" height="23.333333333333329"/>
                                                                         <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="15"/>
                                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -370,7 +370,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="0ae-O7-1JB">
-                                        <rect key="frame" x="22" y="700" width="384" height="42"/>
+                                        <rect key="frame" x="22" y="722" width="384" height="42"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHf-s1-dIs">
                                                 <rect key="frame" x="0.0" y="0.0" width="180" height="42"/>
@@ -405,6 +405,9 @@
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="thc-Gn-95F" kind="presentation" id="b2a-oD-aRh"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -430,6 +433,93 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8lA-Vs-2vv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2001.449275362319" y="2223.2142857142858"/>
+        </scene>
+        <!--UpdateProgressViewController-->
+        <scene sceneID="glO-IM-6ud">
+            <objects>
+                <viewController title="UpdateProgressViewController" id="qUy-I9-nDT" customClass="UpdateProgressViewController" customModule="Readify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OHN-Ny-PTo">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You are updating" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gaz-gV-iVG">
+                                <rect key="frame" x="20" y="56" width="388" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BalooThambi2-ExtraBold" family="Baloo Thambi 2" pointSize="27"/>
+                                <color key="textColor" red="0.65806887849999995" green="0.65806887849999995" blue="0.65806887849999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of pages read" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgc-89-v8F">
+                                <rect key="frame" x="20" y="263" width="242" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BalooThambi2-Medium" family="Baloo Thambi 2" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Have you finished reading the book?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5i3-nj-YaG">
+                                <rect key="frame" x="20" y="404" width="321" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BalooThambi2-Bold" family="Baloo Thambi 2" pointSize="19"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This indicates the total number of pages you have finished reading" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVh-yp-CS9">
+                                <rect key="frame" x="20" y="285" width="242" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BalooThambi2-Regular" family="Baloo Thambi 2" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="4" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GEO-jZ-L1m">
+                                <rect key="frame" x="287" y="263" width="113" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIy-8n-Qwk">
+                                <rect key="frame" x="53" y="465" width="323" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36272013190000002" green="0.7846223712" blue="0.50191700459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="BalooThambi2-ExtraBold" family="Baloo Thambi 2" pointSize="19"/>
+                                <state key="normal" title="Mark As Completed">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BookTitle" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="434-Mt-AlV">
+                                <rect key="frame" x="20" y="102" width="388" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BalooThambi2-ExtraBold" family="Baloo Thambi 2" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Udn-dZ-faZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Update Progress" id="BjH-BK-9QN">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Vo4-yQ-EbE">
+                            <connections>
+                                <action selector="cancelModal:" destination="qUy-I9-nDT" id="N3E-FE-bO5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Bet-li-Ird">
+                            <connections>
+                                <action selector="saveProgress:" destination="qUy-I9-nDT" id="wx9-FN-ZPi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="txtNumberOfPages" destination="GEO-jZ-L1m" id="dNI-bA-ozq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMk-uT-ZxQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3916.8224299065419" y="2030.6695464362851"/>
         </scene>
         <!--Home-->
         <scene sceneID="9Qz-7Q-5DW">
@@ -1133,7 +1223,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SmX-Np-Rvz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wAb-l1-7QT">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1144,6 +1234,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2tU-VR-ftQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1238" y="2225"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2rX-2A-yw7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="thc-Gn-95F" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SgN-uH-g3w">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qUy-I9-nDT" kind="relationship" relationship="rootViewController" id="Pzi-Mg-1hc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cce-do-KEi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3108" y="2031"/>
         </scene>
     </scenes>
     <resources>
