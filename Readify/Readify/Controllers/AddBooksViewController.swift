@@ -161,6 +161,7 @@ class AddBooksViewController: UIViewController {
     }
     
     func saveBook(_ data: [String: Any]) -> Void {
+        
         let book = Book.init(context: self.context)
         book.title = data["title"] as! String
         book.publisher = data["publisher"] as! String
@@ -214,7 +215,10 @@ extension AddBooksViewController: UITextFieldDelegate {
             
             // ISBN valid. Call Google API and get data
             getBookDetailsFromApi(isbn: textFieldIsbn.text!)
+            
+            
         }
-        return true
+        
+        return textField.resignFirstResponder()
     }
 }

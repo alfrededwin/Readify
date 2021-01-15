@@ -214,6 +214,11 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let cell = tableView.cellForRow(at: indexPath)
+        performSegue(withIdentifier: "bookDetailView", sender: cell)
+    }
 
     @IBAction func segmentedChanges(_ sender: UISegmentedControl) {
         tableViewControl.reloadData()
@@ -229,6 +234,24 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
             
             addBooksViewController.context = self.context
+            
+        case "bookDetailView":
+            
+            guard let bookDetailsViewController = segue.destination as? DetailsViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            
+            guard let seletedBookCell = sender as? CustomWishListTableViewCell else {
+                fatalError("Unexpected sender \(String(describing: sender))")
+            }
+            
+            guard let indexPath = tableViewControl.indexPath(for: seletedBookCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            
+            let book: Book = arrayOfCellWishlist[indexPath.row]
+            bookDetailsViewController.book = book
             
         default:
             fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")

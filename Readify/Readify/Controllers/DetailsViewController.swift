@@ -9,10 +9,41 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
+    
+    var book: Book?
+    
+    
+    @IBOutlet weak var bookImage: UIImageView!
+    @IBOutlet weak var bookTitle: UILabel!
+    @IBOutlet weak var bookAuthor: UILabel!
+    @IBOutlet weak var bookDescription: UILabel!
+    @IBOutlet weak var bookPublisher: UILabel!
+    @IBOutlet weak var bookIsbn: UILabel!
+    @IBOutlet weak var bookPublishedYear: UILabel!
+    @IBOutlet weak var bookPageCount: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let image = book?.image {
+            bookImage.image = UIImage(data: image)
+        }
+        
+        bookTitle.text = book?.title
+        bookAuthor.text = book?.author
+        bookDescription.text = book?.short_description
+        bookPublisher.text = "Publisher: " + (book?.publisher)!
+        
+        if let publishedDate = book?.published_date {
+            bookPublishedYear.text = "Published in: " + publishedDate
+        } else {
+            bookPublishedYear.text = "Published in: N/A"
+        }
+
+        bookIsbn.text = (book?.isbn_10!)! + "/" + (book?.isbn_13!)!
+        bookPageCount.text = String(book?.page_count ?? 0) + " pages"
+        
     }
     
 
