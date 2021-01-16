@@ -120,8 +120,26 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     currReadingBook = book
                     break
                 }
-
             }
+            
+            var maxPercentage: Double = 0.0
+            var mostReadBook: Book?
+            
+            for book in books {
+            
+                if ((Double(book.current_page)/Double(book.page_count)) > maxPercentage) {
+                    maxPercentage = (Double(book.current_page)/Double(book.page_count))
+                    mostReadBook = book
+                }
+                
+            }
+            
+            if let topBook = mostReadBook {
+                labelMostReadBook.text = topBook.title
+            } else {
+                labelMostReadBook.text = "N/A"
+            }
+            
         } catch {
             let error = error
             print(error)
