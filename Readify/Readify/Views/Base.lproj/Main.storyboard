@@ -1059,6 +1059,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Analytics" id="DBE-Lr-4sr"/>
                     <connections>
+                        <outlet property="labelMostReadBook" destination="Oa6-Ta-9zn" id="Hvc-0n-mYl"/>
                         <outlet property="labelReadingCount" destination="Jff-QN-gPB" id="I9W-dN-rVH"/>
                         <outlet property="labelWIshListCount" destination="YjN-B7-rtU" id="bFs-Zz-y0h"/>
                         <outlet property="pieChart" destination="MCR-hd-0tr" id="6h5-I5-Bpe"/>

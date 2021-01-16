@@ -24,6 +24,7 @@ class AnalyticsViewController: UIViewController {
     @IBOutlet weak var labelReadingCount: UILabel!
     @IBOutlet weak var labelWIshListCount: UILabel!
     
+    @IBOutlet weak var labelMostReadBook: UILabel!
     
     var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>!
     
@@ -99,6 +100,50 @@ class AnalyticsViewController: UIViewController {
                 if list.name == "Wish List" {
                     labelWIshListCount.text = String(list.books?.count ?? 0)
                 }
+            }
+            
+        } catch {
+            let error = error
+            print(error)
+        }
+        
+        
+        let fetchRequest2 = NSFetchRequest<NSFetchRequestResult>(entityName: "Book")
+        let fetchSort2 = NSSortDescriptor(key: "reading_started_at", ascending: false)
+        
+        fetchRequest2.sortDescriptors = [fetchSort2]
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest2, managedObjectContext: self.context!, sectionNameKeyPath: nil, cacheName: nil)
+         
+        fetchedResultsController.delegate = self
+        
+        do {
+            try fetchedResultsController.performFetch()
+        } catch let error as NSError {
+            print("Unable to perform fetch: \(error.localizedDescription)")
+        }
+        
+        fetchRequest2.returnsObjectsAsFaults = false
+        
+        do {
+            
+            let books: [Book] = try context?.fetch(fetchRequest2) as! [Book]
+            
+            var maxPercentage: Double = 0.0
+            var mostReadBook: Book?
+            
+            for book in books {
+            
+                if ((Double(book.current_page)/Double(book.page_count)) > maxPercentage) {
+                    maxPercentage = (Double(book.current_page)/Double(book.page_count))
+                    mostReadBook = book
+                }
+                
+            }
+            
+            if let topBook = mostReadBook {
+                labelMostReadBook.text = topBook.title
+            } else {
+                labelMostReadBook.text = "N/A"
             }
             
         } catch {
