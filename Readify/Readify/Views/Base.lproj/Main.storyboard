@@ -163,7 +163,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="685"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M37-nR-V9u">
-                                                <rect key="frame" x="0.0" y="0.0" width="182.5" height="43"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="43"/>
                                                 <fontDescription key="fontDescription" name="BalooThambi2-ExtraBold" family="Baloo Thambi 2" pointSize="27"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -275,8 +275,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="V3g-9X-y38">
                                 <rect key="frame" x="0.0" y="108" width="414" height="685"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xzq-ha-fdd">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="367.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xzq-ha-fdd">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="343"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-bookcover" translatesAutoresizingMaskIntoConstraints="NO" id="fxe-6H-kZu">
                                                 <rect key="frame" x="87" y="0.0" width="240" height="280"/>
@@ -285,17 +285,17 @@
                                                     <constraint firstAttribute="height" constant="280" id="c9M-OX-t6w"/>
                                                 </constraints>
                                             </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3bH-RU-YG0">
-                                                <rect key="frame" x="184.5" y="290" width="45" height="77.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3bH-RU-YG0">
+                                                <rect key="frame" x="184" y="290" width="46.5" height="53"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIq-nv-gMj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="36.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIq-nv-gMj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="46.5" height="24"/>
                                                         <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="18"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5J-Jl-H8j">
-                                                        <rect key="frame" x="0.0" y="41.5" width="45" height="36"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5J-Jl-H8j">
+                                                        <rect key="frame" x="0.0" y="29" width="46.5" height="24"/>
                                                         <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="15"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -310,38 +310,38 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ohU-49-e5L">
-                                        <rect key="frame" x="10" y="447.5" width="394" height="115.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ohU-49-e5L">
+                                        <rect key="frame" x="10" y="423" width="394" height="140"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum is simply dummy text of the Lorem" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHh-c1-x9e">
-                                                <rect key="frame" x="0.0" y="0.0" width="384" height="16.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Lorem Ipsum is simply dummy text of the Lorem" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHh-c1-x9e">
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="22"/>
                                                 <fontDescription key="fontDescription" name="BalooThambi2-Regular" family="Baloo Thambi 2" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xUr-kj-oXX">
-                                                <rect key="frame" x="0.0" y="39.5" width="216" height="76"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xUr-kj-oXX">
+                                                <rect key="frame" x="0.0" y="45" width="218.5" height="95"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjH-yo-2Ri">
-                                                        <rect key="frame" x="0.0" y="0.0" width="138.5" height="21"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="141" height="28"/>
                                                         <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="18"/>
                                                         <color key="textColor" systemColor="systemIndigoColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bvX-Ww-bBh">
-                                                        <rect key="frame" x="0.0" y="31" width="216" height="45"/>
+                                                        <rect key="frame" x="0.0" y="38" width="207" height="57"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kxd-kq-Ram">
-                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="45"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="57"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Publisher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87P-QA-XcP">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="63" height="17.5"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="Publisher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87P-QA-XcP">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="63.5" height="23.5"/>
                                                                         <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="15"/>
                                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Published Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bis-mi-bIN">
-                                                                        <rect key="frame" x="0.0" y="27.5" width="100" height="17.5"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Published Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bis-mi-bIN">
+                                                                        <rect key="frame" x="0.0" y="33.5" width="98.5" height="23.5"/>
                                                                         <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="15"/>
                                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -349,16 +349,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eyR-cA-7R0">
-                                                                <rect key="frame" x="113" y="0.0" width="103" height="45"/>
+                                                                <rect key="frame" x="108.5" y="0.0" width="98.5" height="57"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="isbn10 / isbn13" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amI-cl-8BE">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="103" height="17.5"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="isbn10 / isbn13" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amI-cl-8BE">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="94.5" height="23.5"/>
                                                                         <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="15"/>
                                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="224 pages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiJ-Lv-xLT">
-                                                                        <rect key="frame" x="0.0" y="27.5" width="70.5" height="17.5"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" ambiguous="YES" text="224 pages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiJ-Lv-xLT">
+                                                                        <rect key="frame" x="0.0" y="33.5" width="67" height="23.5"/>
                                                                         <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="15"/>
                                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -602,28 +602,28 @@
                                                 </scopeButtonTitles>
                                             </searchBar>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Reader" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laS-mL-RJ0" userLabel="greeting">
-                                                <rect key="frame" x="15" y="71" width="384" height="35"/>
+                                                <rect key="frame" x="15" y="71" width="384" height="46.5"/>
                                                 <fontDescription key="fontDescription" name="BalooThambi2-ExtraBold" family="Baloo Thambi 2" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26y-11-zmu" userLabel="currentlyReadingView" customClass="ShadowView" customModule="Readify" customModuleProvider="target">
-                                                <rect key="frame" x="15" y="121" width="384" height="215"/>
+                                                <rect key="frame" x="15" y="132.5" width="384" height="215"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are currently reading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Qp-M0-I4M" userLabel="youAreCurrentlyReading">
-                                                        <rect key="frame" x="20" y="20" width="344" height="17.5"/>
+                                                        <rect key="frame" x="20" y="20" width="344" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="BalooThambi2-Regular" family="Baloo Thambi 2" pointSize="15"/>
                                                         <color key="textColor" red="0.69757318369999999" green="0.84525638690000005" blue="0.90614334259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAH-Pl-8GH" userLabel="currentlyReadingLbl">
-                                                        <rect key="frame" x="20" y="40.5" width="344" height="31.5"/>
+                                                        <rect key="frame" x="20" y="46.5" width="344" height="41.5"/>
                                                         <fontDescription key="fontDescription" name="BalooThambi2-Bold" family="Baloo Thambi 2" pointSize="27"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qoV-3H-gG9">
-                                                        <rect key="frame" x="100" y="79" width="184" height="110"/>
+                                                        <rect key="frame" x="100" y="95" width="184" height="110"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="110" id="ha9-lc-OFl"/>
                                                         </constraints>
@@ -658,7 +658,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UCL-5n-HYz" userLabel="quickActionCards">
-                                                <rect key="frame" x="15" y="356" width="399" height="128"/>
+                                                <rect key="frame" x="15" y="367.5" width="399" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="hC8-be-bHL"/>
@@ -699,9 +699,9 @@
                                                 </connections>
                                             </collectionView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWN-qa-p5S" userLabel="currentlyReadingView" customClass="ShadowView" customModule="Readify" customModuleProvider="target">
-                                                <rect key="frame" x="15" y="504" width="384" height="190"/>
+                                                <rect key="frame" x="15" y="515.5" width="384" height="190"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your last week reading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laj-6q-xDL" userLabel="currentlyReadingLbl">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your reading summary" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laj-6q-xDL" userLabel="currentlyReadingLbl">
                                                         <rect key="frame" x="15" y="20" width="354" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="32" id="hBj-vf-rjo"/>
@@ -714,19 +714,19 @@
                                                         <rect key="frame" x="15" y="62" width="354" height="112.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yyO-k0-FU5">
-                                                                <rect key="frame" x="0.0" y="13.5" width="79" height="86"/>
+                                                                <rect key="frame" x="0.0" y="9.5" width="79" height="93.5"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noOfBooksRead" translatesAutoresizingMaskIntoConstraints="NO" id="ubJ-NC-xgE">
                                                                         <rect key="frame" x="23.5" y="0.0" width="32" height="32"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. Of Books Read" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJM-pa-g8W">
-                                                                        <rect key="frame" x="7.5" y="40" width="63.5" height="23.5"/>
+                                                                        <rect key="frame" x="10" y="40" width="59" height="31"/>
                                                                         <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="10"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rn3-D1-xfO">
-                                                                        <rect key="frame" x="36" y="71.5" width="7" height="14.5"/>
+                                                                        <rect key="frame" x="36" y="79" width="7" height="14.5"/>
                                                                         <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="11"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -734,19 +734,19 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2yD-FP-Zlg">
-                                                                <rect key="frame" x="92" y="19" width="78.5" height="74.5"/>
+                                                                <rect key="frame" x="92" y="17.5" width="78.5" height="78"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="cab-56-z40">
                                                                         <rect key="frame" x="23" y="0.0" width="32" height="32"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Time Spent" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8W-k7-UB4">
-                                                                        <rect key="frame" x="1.5" y="40" width="75.5" height="12"/>
+                                                                        <rect key="frame" x="2" y="40" width="74" height="15.5"/>
                                                                         <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="10"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23 hrs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuP-2b-y7m">
-                                                                        <rect key="frame" x="23" y="60" width="32" height="14.5"/>
+                                                                        <rect key="frame" x="23" y="63.5" width="32" height="14.5"/>
                                                                         <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="11"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -754,19 +754,19 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IY9-9z-d3C">
-                                                                <rect key="frame" x="183.5" y="19" width="79" height="74.5"/>
+                                                                <rect key="frame" x="183.5" y="17.5" width="79" height="78"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mostReadBook" translatesAutoresizingMaskIntoConstraints="NO" id="qSR-4C-yDN">
                                                                         <rect key="frame" x="23.5" y="0.0" width="32" height="32"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Read Book" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxm-dT-8Hb">
-                                                                        <rect key="frame" x="1.5" y="40" width="75.5" height="12"/>
+                                                                        <rect key="frame" x="4" y="40" width="71" height="15.5"/>
                                                                         <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="10"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Dark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MB-5V-Gbk">
-                                                                        <rect key="frame" x="17.5" y="60" width="44" height="14.5"/>
+                                                                        <rect key="frame" x="17.5" y="63.5" width="44" height="14.5"/>
                                                                         <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="11"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -777,19 +777,19 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="POp-if-2oZ">
-                                                                <rect key="frame" x="275.5" y="13.5" width="78.5" height="86"/>
+                                                                <rect key="frame" x="275.5" y="9.5" width="78.5" height="93.5"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noOfBooksAdded" translatesAutoresizingMaskIntoConstraints="NO" id="Sjc-OI-Aq9">
                                                                         <rect key="frame" x="23" y="0.0" width="32" height="32"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. Of Books Added" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYm-A4-qf5">
-                                                                        <rect key="frame" x="7.5" y="40" width="63.5" height="23.5"/>
+                                                                        <rect key="frame" x="9.5" y="40" width="59" height="31"/>
                                                                         <fontDescription key="fontDescription" name="BalooThambi2-SemiBold" family="Baloo Thambi 2" pointSize="10"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjd-sM-ByX">
-                                                                        <rect key="frame" x="35.5" y="71.5" width="7" height="14.5"/>
+                                                                        <rect key="frame" x="35.5" y="79" width="7" height="14.5"/>
                                                                         <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="11"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -871,8 +871,12 @@
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
                         <outlet property="collectionView" destination="UCL-5n-HYz" id="FwA-Kw-vNB"/>
+                        <outlet property="currBookImage" destination="qoV-3H-gG9" id="ibY-YB-6WK"/>
+                        <outlet property="currBookTitle" destination="BAH-Pl-8GH" id="jo1-C1-3hb"/>
                         <outlet property="currentlyReadingBookImage" destination="qoV-3H-gG9" id="t0a-rW-uWG"/>
                         <outlet property="currentlyReadingBookLbl" destination="BAH-Pl-8GH" id="D7t-vG-7Fq"/>
+                        <outlet property="labelReadingCount" destination="Rn3-D1-xfO" id="SI0-8l-JEm"/>
+                        <outlet property="labelWishListCount" destination="Tjd-sM-ByX" id="2n5-zO-2py"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3DO-Gc-25U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -909,7 +913,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xg9-0F-bHR" userLabel="currentlyReadingView" customClass="ShadowView" customModule="Readify" customModuleProvider="target">
                                 <rect key="frame" x="15" y="108" width="384" height="190"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last week reading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPg-IJ-uiF" userLabel="currentlyReadingLbl">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your reading summary" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPg-IJ-uiF" userLabel="currentlyReadingLbl">
                                         <rect key="frame" x="15" y="20" width="354" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="yLV-Ki-OJE"/>
@@ -1054,6 +1058,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Analytics" id="DBE-Lr-4sr"/>
                     <connections>
+                        <outlet property="labelReadingCount" destination="Jff-QN-gPB" id="I9W-dN-rVH"/>
+                        <outlet property="labelWIshListCount" destination="YjN-B7-rtU" id="bFs-Zz-y0h"/>
                         <outlet property="pieChart" destination="MCR-hd-0tr" id="6h5-I5-Bpe"/>
                     </connections>
                 </viewController>

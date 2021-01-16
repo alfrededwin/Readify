@@ -78,7 +78,10 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     //Loads the relevant data to the relevant segment control using the XIB file
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if (segmentedControl.selectedSegmentIndex == 0) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        
+        if (segmentedControl.selectedSegmentIndex == 0) { // reading list
             
             let cellForReading = Bundle.main.loadNibNamed("CustomTableViewCell", owner: self, options: nil)?.first as! CustomTableViewCell
             
@@ -89,6 +92,13 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 cellForReading.bookImage.image = UIImage(data: image)
             }
             
+            if let readingStartDate = arrayOfCellDataReading[indexPath.row].reading_started_at {
+                cellForReading.labelStartReading.text = "Started Reading: " + dateFormatter.string(from: readingStartDate)
+            }
+            
+            if let lastReadDate = arrayOfCellDataReading[indexPath.row].progress_updated_at {
+                cellForReading.labelLastRead.text = "Last Reading: " + dateFormatter.string(from: lastReadDate)
+            }
             
             //styling
             cellForReading.contentView.layer.cornerRadius = 10
@@ -96,7 +106,7 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             return cellForReading
             
-        } else if (segmentedControl.selectedSegmentIndex == 1) {
+        } else if (segmentedControl.selectedSegmentIndex == 1) { // completed list
             
             let cellForCompleted = Bundle.main.loadNibNamed("CustomCompletedTableViewCell", owner: self, options: nil)?.first as! CustomCompletedTableViewCell
             cellForCompleted.bookTitle.text = arrayOfCellDataCompleted[indexPath.row].title ?? ""
@@ -106,13 +116,22 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 cellForCompleted.bookImage.image = UIImage(data: image)
             }
             
+            if let readingStartDate = arrayOfCellDataCompleted[indexPath.row].reading_started_at {
+                cellForCompleted.labelStartReading.text = "Started Reading: " + dateFormatter.string(from: readingStartDate)
+            }
+            
+            if let completedDate = arrayOfCellDataCompleted[indexPath.row].reading_completed_at {
+                cellForCompleted.labelCompletedOn.text = "Completed On: " + dateFormatter.string(from: completedDate)
+            }
+            
+            
             //styling
             cellForCompleted.contentView.layer.cornerRadius = 10
             cellForCompleted.contentView.frame = cellForCompleted.contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
             
             return cellForCompleted
             
-        } else {
+        } else { // wish list
             
             let cellForWishlist = Bundle.main.loadNibNamed("CustomWishListTableViewCell", owner: self, options: nil)?.first as! CustomWishListTableViewCell
             cellForWishlist.bookTitle.text = arrayOfCellWishlist[indexPath.row].title ?? ""
@@ -121,6 +140,12 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             if let image = arrayOfCellWishlist[indexPath.row].image {
                 cellForWishlist.bookImage.image = UIImage(data: image)
             }
+            
+            if let addedDate = arrayOfCellWishlist[indexPath.row].created_at {
+                cellForWishlist.labelAddedDate.text = "Added Date: " + dateFormatter.string(from: addedDate)
+            }
+                
+            cellForWishlist.labelTotalPages.text = "Total pages: " + String(arrayOfCellWishlist[indexPath.row].page_count)
             
             //styling
             cellForWishlist.contentView.layer.cornerRadius = 10
@@ -153,7 +178,7 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
          
         fetchedResultsController.delegate = self
         
-        let predicate = NSPredicate(format: "name contains[c] %@", listName)
+        let predicate = NSPredicate(format: "name == %@", listName)
         fetchedResultsController.fetchRequest.predicate = predicate
         
         do {
@@ -245,6 +270,12 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
 extension BooksViewController: NSFetchedResultsControllerDelegate {
     
+    /*
+     
+     We manually control this with viewDidAppear as we have higly customized cells
+    
+     */
+    
     /*func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableViewControl.beginUpdates()
     }
@@ -286,17 +317,4 @@ extension BooksViewController: NSFetchedResultsControllerDelegate {
         }
     }*/
     
-//    func configureCell(_ cell: CustomTableViewCell, at indexPath: IndexPath) {
-//        let book = fetchedResultsController.object(at: indexPath) as! Book
-//
-//        var author: String = "";
-//        if let authours = book.authors!.allObjects as? [Author] {
-//
-//            for item in authours {
-//                author = "\(author), \(item)"
-//            }
-//        }
-//
-//        cell.customInit(text: book.title!, author: author)
-//    }
 }

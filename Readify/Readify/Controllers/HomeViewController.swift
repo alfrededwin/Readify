@@ -7,6 +7,7 @@
 
 import UIKit
 import QuartzCore
+import CoreData
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -15,9 +16,27 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var currentlyReadingBookLbl: UILabel!
     @IBOutlet weak var currentlyReadingBookImage: UIImageView!
     
+    @IBOutlet weak var labelReadingCount: UILabel!
+    @IBOutlet weak var labelWishListCount: UILabel!
+    
+    
+    @IBOutlet weak var currBookImage: UIImageView!
+    @IBOutlet weak var currBookTitle: UILabel!
+    
+    var currReadingBook: Book?
+    
     var imageArray=[UIImage(named: "Img1"),UIImage(named: "Img2"),UIImage(named: "Img3"),UIImage(named: "Img4")]
     var arr = [String]()
     var sectionArr = [Any] ()
+    
+    var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>!
+    
+    var context: NSManagedObjectContext? {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return nil
+        }
+        return appDelegate.persistentContainer.viewContext
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +45,98 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         //to remove the background color of the collection view
         collectionView.backgroundColor = UIColor.clear
 
+        labelReadingCount.text = "0"
+        labelWishListCount.text = "0"
     }
     
     // This Function is for the Onboarding Screen
     override func viewDidAppear(_ animated: Bool) {
+        currReadingBook = nil
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "BookList")
+        let fetchSort = NSSortDescriptor(key: "name", ascending: true)
+        
+        fetchRequest.sortDescriptors = [fetchSort]
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.context!, sectionNameKeyPath: nil, cacheName: nil)
+         
+        fetchedResultsController.delegate = self
+        
+        do {
+            try fetchedResultsController.performFetch()
+        } catch let error as NSError {
+            print("Unable to perform fetch: \(error.localizedDescription)")
+        }
+        
+        fetchRequest.returnsObjectsAsFaults = false
+        
+        // get all the categories
+        do {
+            
+            let bookList: [BookList] = try context?.fetch(fetchRequest) as! [BookList]
+            
+            for list in bookList {
+                
+                if list.name == "Reading List" {
+                    labelReadingCount.text = String(list.books?.count ?? 0)
+                }
+                
+                if list.name == "Wish List" {
+                    labelWishListCount.text = String(list.books?.count ?? 0)
+                }
+            }
+            
+        } catch {
+            let error = error
+            print(error)
+        }
+        
+        
+        
+        let fetchRequest2 = NSFetchRequest<NSFetchRequestResult>(entityName: "Book")
+        let fetchSort2 = NSSortDescriptor(key: "reading_started_at", ascending: false)
+        
+        fetchRequest2.sortDescriptors = [fetchSort2]
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest2, managedObjectContext: self.context!, sectionNameKeyPath: nil, cacheName: nil)
+         
+        fetchedResultsController.delegate = self
+        
+        do {
+            try fetchedResultsController.performFetch()
+        } catch let error as NSError {
+            print("Unable to perform fetch: \(error.localizedDescription)")
+        }
+        
+        fetchRequest2.returnsObjectsAsFaults = false
+        
+        do {
+            
+            let books: [Book] = try context?.fetch(fetchRequest2) as! [Book]
+            
+            for book in books {
+                if book.booklist?.name == "Reading List" {
+                    currReadingBook = book
+                    break
+                }
+            }
+        } catch {
+            let error = error
+            print(error)
+        }
+        
+        if let currBook = currReadingBook {
+            
+            currBookTitle.text = currBook.title
+            
+            if let image = currBook.image {
+                currBookImage.isHidden = false
+                currBookImage.image = UIImage(data: image)
+            }
+        } else {
+            currBookImage.isHidden = true
+            currBookTitle.text = "Reading list empty"
+        }
+        
+        // user onboarding
         if UserDefaults.standard.bool(forKey: "hasViewOnboarding") {
             return
         }
@@ -89,4 +196,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     
 
+}
+
+extension HomeViewController: NSFetchedResultsControllerDelegate {
+    
 }

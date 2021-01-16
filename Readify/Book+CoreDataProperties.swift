@@ -32,6 +32,9 @@ extension Book {
     @NSManaged public var authors: NSSet?
     @NSManaged public var booklist: BookList?
     @NSManaged public var categories: NSSet?
+    @NSManaged public var reading_started_at: Date?
+    @NSManaged public var progress_updated_at: Date?
+    @NSManaged public var reading_completed_at: Date?
 
 }
 

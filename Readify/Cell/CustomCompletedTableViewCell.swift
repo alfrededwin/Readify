@@ -13,6 +13,10 @@ class CustomCompletedTableViewCell: UITableViewCell {
     @IBOutlet weak var bookAuthor: UILabel!
     @IBOutlet weak var bookImage: UIImageView!
     
+    
+    @IBOutlet weak var labelStartReading: UILabel!
+    @IBOutlet weak var labelCompletedOn: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
