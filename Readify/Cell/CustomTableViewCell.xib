@@ -59,7 +59,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </button>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HGM-1x-dqD">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-bookcover" translatesAutoresizingMaskIntoConstraints="NO" id="HGM-1x-dqD">
                         <rect key="frame" x="9" y="16" width="95" height="134"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
@@ -68,14 +68,15 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="Author" destination="QrI-MI-DFD" id="RNE-cS-Uev"/>
-                <outlet property="BookTitle" destination="TnJ-5N-5f3" id="r77-86-tsi"/>
+                <outlet property="bookAuthor" destination="QrI-MI-DFD" id="rHi-ra-oC2"/>
                 <outlet property="bookImage" destination="HGM-1x-dqD" id="Dga-7F-GlS"/>
+                <outlet property="bookTitle" destination="TnJ-5N-5f3" id="Jlt-tI-O19"/>
             </connections>
             <point key="canvasLocation" x="-204.34782608695653" y="110.49107142857143"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="default-bookcover" width="132.5" height="200"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
