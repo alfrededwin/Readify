@@ -49,6 +49,7 @@ class UpdateProgressViewController: UIViewController {
             }
             
             book.current_page = Int16(readPage)
+            book.progress_updated_at = Date()
             
             do {
                 // save the value
@@ -71,6 +72,8 @@ class UpdateProgressViewController: UIViewController {
         bookList.name = "Completed List"
         bookList.list_type = 2
         bookList.addToBooks(book)
+        
+        book.reading_completed_at = Date()
         
         do {
             // save the value

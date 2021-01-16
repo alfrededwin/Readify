@@ -62,21 +62,21 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="KlF-rL-zp4">
                                         <rect key="frame" x="0.0" y="74.5" width="167.5" height="36.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Started Reading :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5w-GO-Dma">
-                                                <rect key="frame" x="0.0" y="0.0" width="94.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Added date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5w-GO-Dma">
+                                                <rect key="frame" x="0.0" y="0.0" width="66.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="BalooThambi2-Regular" family="Baloo Thambi 2" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Last Read : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdR-8R-XQQ">
-                                                <rect key="frame" x="0.0" y="20" width="62" height="16.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Total pages:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdR-8R-XQQ">
+                                                <rect key="frame" x="0.0" y="20" width="66.5" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="BalooThambi2-Regular" family="Baloo Thambi 2" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24L-i4-82M">
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24L-i4-82M">
                                         <rect key="frame" x="20" y="126" width="127.5" height="32"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -118,6 +118,8 @@
                 <outlet property="BookTitle" destination="B23-be-ao3" id="72K-sJ-w1T"/>
                 <outlet property="bookAuthor" destination="fI5-Wp-Ukt" id="eTp-uE-EH6"/>
                 <outlet property="bookImage" destination="wcA-kj-jy5" id="eS7-YH-8oh"/>
+                <outlet property="labelAddedDate" destination="Y5w-GO-Dma" id="ACQ-Ko-DYy"/>
+                <outlet property="labelTotalPages" destination="NdR-8R-XQQ" id="rfK-7n-Y8f"/>
             </connections>
             <point key="canvasLocation" x="-204.34782608695653" y="110.49107142857143"/>
         </tableViewCell>

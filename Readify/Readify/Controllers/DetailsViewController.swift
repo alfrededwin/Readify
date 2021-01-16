@@ -78,6 +78,8 @@ class DetailsViewController: UIViewController {
         bookList.list_type = 1
         bookList.addToBooks(book)
         
+        book.reading_started_at = Date()
+        
         do {
             // save the value
             try self.context?.save()

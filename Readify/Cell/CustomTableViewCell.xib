@@ -118,6 +118,8 @@
                 <outlet property="bookAuthor" destination="QrI-MI-DFD" id="rHi-ra-oC2"/>
                 <outlet property="bookImage" destination="HGM-1x-dqD" id="Dga-7F-GlS"/>
                 <outlet property="bookTitle" destination="TnJ-5N-5f3" id="Jlt-tI-O19"/>
+                <outlet property="labelLastRead" destination="tK3-4O-c2m" id="U3M-WZ-Qbk"/>
+                <outlet property="labelStartReading" destination="HZd-3N-7UY" id="Vxi-Mz-zqn"/>
             </connections>
             <point key="canvasLocation" x="-204.34782608695653" y="110.49107142857143"/>
         </tableViewCell>

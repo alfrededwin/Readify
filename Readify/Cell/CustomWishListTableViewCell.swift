@@ -13,6 +13,10 @@ class CustomWishListTableViewCell: UITableViewCell {
     @IBOutlet weak var bookAuthor: UILabel!
     @IBOutlet weak var bookImage: UIImageView!
     
+    
+    @IBOutlet weak var labelAddedDate: UILabel!
+    @IBOutlet weak var labelTotalPages: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
