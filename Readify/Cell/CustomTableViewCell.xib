@@ -83,7 +83,7 @@
                                             <constraint firstAttribute="height" constant="32" id="7Xe-Wi-DgZ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="BalooThambi2-Bold" family="Baloo Thambi 2" pointSize="14"/>
-                                        <state key="normal" title="View Analytics">
+                                        <state key="normal" title="Update Progress">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
