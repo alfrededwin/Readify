@@ -15,7 +15,7 @@ import CoreData
 
 class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
+    var listMode: Int!
     var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>!
     
     var context: NSManagedObjectContext? {
@@ -42,94 +42,9 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidAppear(_ animated: Bool) {
         
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "BookList")
-        let fetchSort = NSSortDescriptor(key: "name", ascending: true)
-        
-        fetchRequest.sortDescriptors = [fetchSort]
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.context!, sectionNameKeyPath: nil, cacheName: nil)
-         
-        fetchedResultsController.delegate = self
-        
-        // get books in wish list
-        let wishPredicate = NSPredicate(format: "name contains[c] %@", "Wish List")
-        fetchedResultsController.fetchRequest.predicate = wishPredicate
-        
-        do {
-            try fetchedResultsController.performFetch()
-        } catch let error as NSError {
-            print("Unable to perform fetch: \(error.localizedDescription)")
-        }
-        
-        fetchRequest.returnsObjectsAsFaults = false
-        
-        do {
-            let bookList: [BookList] = try context?.fetch(fetchRequest) as! [BookList]
-            
-            var wishListBooks = [Book]()
-            for list in bookList {
-                wishListBooks += list.books?.allObjects as! [Book]
-            }
-            
-            arrayOfCellWishlist = wishListBooks
-            
-        } catch {
-            let error = error
-            print(error)
-        }
-        
-        // get book in reading
-        let readingPredicate = NSPredicate(format: "name contains[c] %@", "Reading List")
-        fetchedResultsController.fetchRequest.predicate = readingPredicate
-        
-        do {
-            try fetchedResultsController.performFetch()
-        } catch let error as NSError {
-            print("Unable to perform fetch: \(error.localizedDescription)")
-        }
-        
-        fetchRequest.returnsObjectsAsFaults = false
-        
-        do {
-            let bookList: [BookList] = try context?.fetch(fetchRequest) as! [BookList]
-    
-            var readingBooks = [Book]()
-            for list in bookList {
-                readingBooks += list.books?.allObjects as! [Book]
-            }
-            
-            arrayOfCellDataReading = readingBooks
-            
-        } catch {
-            let error = error
-            print(error)
-        }
-        
-        // get book in completed
-        let completedPredicate = NSPredicate(format: "name contains[c] %@", "Completed List")
-        fetchedResultsController.fetchRequest.predicate = completedPredicate
-        
-        do {
-            try fetchedResultsController.performFetch()
-        } catch let error as NSError {
-            print("Unable to perform fetch: \(error.localizedDescription)")
-        }
-        
-        fetchRequest.returnsObjectsAsFaults = false
-        
-        do {
-            let bookList: [BookList] = try context?.fetch(fetchRequest) as! [BookList]
-            
-            var completedBooks = [Book]()
-            for list in bookList {
-                completedBooks += list.books?.allObjects as! [Book]
-            }
-            
-            arrayOfCellDataCompleted = completedBooks
-            
-        } catch {
-            let error = error
-            print(error)
-        }
+        arrayOfCellWishlist = getBooksByList(listName: "Wish List")
+        arrayOfCellDataReading = getBooksByList(listName: "Reading List")
+        arrayOfCellDataCompleted = getBooksByList(listName: "Completed List")
         
         tableViewControl.reloadData()
         
@@ -138,16 +53,17 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // Creates the relevant number of rows in the view based on the number of records in the array
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch segmentedControl.selectedSegmentIndex {
-                case 0:
-                    return arrayOfCellDataReading.count
-                case 1:
-                    return arrayOfCellDataCompleted.count
-                case 2:
-                    return arrayOfCellWishlist.count
-                default:
-                    break
-                }
-                return 0
+            case 0:
+                return arrayOfCellDataReading.count
+            case 1:
+                return arrayOfCellDataCompleted.count
+            case 2:
+                return arrayOfCellWishlist.count
+            default:
+                break
+            }
+        
+        return 0
         
     }
     
@@ -162,12 +78,12 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     //Loads the relevant data to the relevant segment control using the XIB file
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if (segmentedControl.selectedSegmentIndex == 0){
+        if (segmentedControl.selectedSegmentIndex == 0) {
             
             let cellForReading = Bundle.main.loadNibNamed("CustomTableViewCell", owner: self, options: nil)?.first as! CustomTableViewCell
             
-            cellForReading.bookTitle.text = arrayOfCellDataReading[indexPath.row].title
-            cellForReading.bookAuthor.text = arrayOfCellDataReading[indexPath.row].author
+            cellForReading.bookTitle.text = arrayOfCellDataReading[indexPath.row].title ?? ""
+            cellForReading.bookAuthor.text = arrayOfCellDataReading[indexPath.row].author ?? ""
             
             if let image = arrayOfCellDataReading[indexPath.row].image {
                 cellForReading.bookImage.image = UIImage(data: image)
@@ -183,8 +99,8 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         } else if (segmentedControl.selectedSegmentIndex == 1) {
             
             let cellForCompleted = Bundle.main.loadNibNamed("CustomCompletedTableViewCell", owner: self, options: nil)?.first as! CustomCompletedTableViewCell
-            cellForCompleted.bookTitle.text = arrayOfCellDataCompleted[indexPath.row].title
-            cellForCompleted.bookAuthor.text = arrayOfCellDataCompleted[indexPath.row].author
+            cellForCompleted.bookTitle.text = arrayOfCellDataCompleted[indexPath.row].title ?? ""
+            cellForCompleted.bookAuthor.text = arrayOfCellDataCompleted[indexPath.row].author ?? ""
             
             if let image = arrayOfCellDataCompleted[indexPath.row].image {
                 cellForCompleted.bookImage.image = UIImage(data: image)
@@ -199,8 +115,8 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         } else {
             
             let cellForWishlist = Bundle.main.loadNibNamed("CustomWishListTableViewCell", owner: self, options: nil)?.first as! CustomWishListTableViewCell
-            cellForWishlist.bookTitle.text = arrayOfCellWishlist[indexPath.row].title
-            cellForWishlist.bookAuthor.text = arrayOfCellWishlist[indexPath.row].author
+            cellForWishlist.bookTitle.text = arrayOfCellWishlist[indexPath.row].title ?? ""
+            cellForWishlist.bookAuthor.text = arrayOfCellWishlist[indexPath.row].author ?? ""
             
             if let image = arrayOfCellWishlist[indexPath.row].image {
                 cellForWishlist.bookImage.image = UIImage(data: image)
@@ -224,6 +140,45 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableViewControl.reloadData()
     }
     
+    // return list of books by given list name
+    private func getBooksByList(listName: String) -> [Book] {
+        
+        var listOfBooks = [Book]()
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "BookList")
+        let fetchSort = NSSortDescriptor(key: "name", ascending: true)
+        
+        fetchRequest.sortDescriptors = [fetchSort]
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.context!, sectionNameKeyPath: nil, cacheName: nil)
+         
+        fetchedResultsController.delegate = self
+        
+        let predicate = NSPredicate(format: "name contains[c] %@", listName)
+        fetchedResultsController.fetchRequest.predicate = predicate
+        
+        do {
+            try fetchedResultsController.performFetch()
+        } catch let error as NSError {
+            print("Unable to perform fetch: \(error.localizedDescription)")
+        }
+        
+        fetchRequest.returnsObjectsAsFaults = false
+        
+        do {
+            
+            let bookList: [BookList] = try context?.fetch(fetchRequest) as! [BookList]
+            
+            for list in bookList {
+                listOfBooks += list.books?.allObjects as! [Book]
+            }
+            
+        } catch {
+            let error = error
+            print(error)
+        }
+        
+        return listOfBooks
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch (segue.identifier ?? "") {
@@ -242,16 +197,45 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
             
             
-            guard let seletedBookCell = sender as? CustomWishListTableViewCell else {
-                fatalError("Unexpected sender \(String(describing: sender))")
+            var book: Book!
+            
+            switch segmentedControl.selectedSegmentIndex {
+            case 0:
+                guard let seletedBookCell = sender as? CustomTableViewCell else {
+                    fatalError("Unexpected sender \(String(describing: sender))")
+                }
+                
+                guard let indexPath = tableViewControl.indexPath(for: seletedBookCell) else {
+                    fatalError("The selected cell is not being displayed by the table")
+                }
+                
+                book = arrayOfCellDataReading[indexPath.row]
+            case 1:
+                guard let seletedBookCell = sender as? CustomCompletedTableViewCell else {
+                    fatalError("Unexpected sender \(String(describing: sender))")
+                }
+                
+                guard let indexPath = tableViewControl.indexPath(for: seletedBookCell) else {
+                    fatalError("The selected cell is not being displayed by the table")
+                }
+                
+                book = arrayOfCellDataCompleted[indexPath.row]
+            default:
+                guard let seletedBookCell = sender as? CustomWishListTableViewCell else {
+                    fatalError("Unexpected sender \(String(describing: sender))")
+                }
+                
+                guard let indexPath = tableViewControl.indexPath(for: seletedBookCell) else {
+                    fatalError("The selected cell is not being displayed by the table")
+                }
+                
+                book = arrayOfCellWishlist[indexPath.row]
             }
             
-            guard let indexPath = tableViewControl.indexPath(for: seletedBookCell) else {
-                fatalError("The selected cell is not being displayed by the table")
-            }
             
-            let book: Book = arrayOfCellWishlist[indexPath.row]
             bookDetailsViewController.book = book
+            bookDetailsViewController.context = context
+            bookDetailsViewController.listMode = segmentedControl.selectedSegmentIndex
             
         default:
             fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
@@ -261,7 +245,7 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
 extension BooksViewController: NSFetchedResultsControllerDelegate {
     
-    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+    /*func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableViewControl.beginUpdates()
     }
     
@@ -300,7 +284,7 @@ extension BooksViewController: NSFetchedResultsControllerDelegate {
         default:
             break
         }
-    }
+    }*/
     
 //    func configureCell(_ cell: CustomTableViewCell, at indexPath: IndexPath) {
 //        let book = fetchedResultsController.object(at: indexPath) as! Book

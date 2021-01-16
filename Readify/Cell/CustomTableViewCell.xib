@@ -68,9 +68,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="Author" destination="QrI-MI-DFD" id="RNE-cS-Uev"/>
-                <outlet property="BookTitle" destination="TnJ-5N-5f3" id="r77-86-tsi"/>
+                <outlet property="bookAuthor" destination="QrI-MI-DFD" id="rHi-ra-oC2"/>
                 <outlet property="bookImage" destination="HGM-1x-dqD" id="Dga-7F-GlS"/>
+                <outlet property="bookTitle" destination="TnJ-5N-5f3" id="Jlt-tI-O19"/>
             </connections>
             <point key="canvasLocation" x="-204.34782608695653" y="110.49107142857143"/>
         </tableViewCell>
