@@ -92,7 +92,7 @@ class AnalyticsViewController: UIViewController {
             for list in bookList {
                 bookCountStat.append(bookListStats(listName: list.name!, listCount: list.books?.count))
                 
-                if list.name == "Reading List" {
+                if list.name == "Completed List" {
                     labelReadingCount.text = String(list.books?.count ?? 0)
                 }
                 

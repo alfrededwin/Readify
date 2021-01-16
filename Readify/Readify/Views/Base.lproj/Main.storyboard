@@ -875,6 +875,7 @@
                         <outlet property="currBookTitle" destination="BAH-Pl-8GH" id="jo1-C1-3hb"/>
                         <outlet property="currentlyReadingBookImage" destination="qoV-3H-gG9" id="t0a-rW-uWG"/>
                         <outlet property="currentlyReadingBookLbl" destination="BAH-Pl-8GH" id="D7t-vG-7Fq"/>
+                        <outlet property="labelMostReadBook" destination="8MB-5V-Gbk" id="2nb-Sz-Ebq"/>
                         <outlet property="labelReadingCount" destination="Rn3-D1-xfO" id="SI0-8l-JEm"/>
                         <outlet property="labelWishListCount" destination="Tjd-sM-ByX" id="2n5-zO-2py"/>
                     </connections>

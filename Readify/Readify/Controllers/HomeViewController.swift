@@ -18,6 +18,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet weak var labelReadingCount: UILabel!
     @IBOutlet weak var labelWishListCount: UILabel!
+    @IBOutlet weak var labelMostReadBook: UILabel!
     
     
     @IBOutlet weak var currBookImage: UIImageView!
@@ -76,13 +77,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             
             for list in bookList {
                 
-                if list.name == "Reading List" {
+                if list.name == "Completed List" {
                     labelReadingCount.text = String(list.books?.count ?? 0)
                 }
                 
                 if list.name == "Wish List" {
                     labelWishListCount.text = String(list.books?.count ?? 0)
                 }
+                
+                
             }
             
         } catch {
@@ -117,6 +120,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     currReadingBook = book
                     break
                 }
+
             }
         } catch {
             let error = error
